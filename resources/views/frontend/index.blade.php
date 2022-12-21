@@ -19,13 +19,13 @@ https://templatemo.com/tm-557-grad-school
 	<title> Versity | Home </title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="{{ asset('/frontend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{asset('/frontend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
 	<!-- Additional CSS Files -->
-	<link rel="stylesheet" href="{{ asset('/frontend/assets/css/fontawesome.css') }}">
-	<link rel="stylesheet" href="{{ asset('/frontend/assets/css/templatemo-grad-school.css') }}">
-	<link rel="stylesheet" href="{{ asset('/frontend/assets/css/owl.css') }}">
-	<link rel="stylesheet" href="{{ asset('/frontend/assets/css/lightbox.css') }}">
+	<link rel="stylesheet" href="{{asset('/frontend/assets/css/fontawesome.css') }}">
+	<link rel="stylesheet" href="{{asset('/frontend/assets/css/templatemo-grad-school.css') }}">
+	<link rel="stylesheet" href="{{asset('/frontend/assets/css/owl.css') }}">
+	<link rel="stylesheet" href="{{asset('/frontend/assets/css/lightbox.css') }}">
 
 </head>
 
