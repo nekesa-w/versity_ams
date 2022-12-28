@@ -31,7 +31,6 @@ https://templatemo.com/tm-557-grad-school
 
 <body>
 
-	<!-- ***** Header Area Start ***** -->
 	<header class="main-header clearfix" role="header">
 		<div class="logo">
 			<a href=""><em>Ver</em>sity</a>
@@ -42,17 +41,12 @@ https://templatemo.com/tm-557-grad-school
 		<nav id="menu" class="main-nav" role="navigation">
 			<ul class="main-menu">
 
-				<li class="has-submenu"><a href="">Future Students</a>
-					<ul class="sub-menu">
-						<li><a href="#section3">Admissions</a></li>
-						<li><a href="#section4">Applications</a></li>
-					</ul>
-				</li>
+				<li><a href="">Future Students</a></li>
 
 				<li class="has-submenu"><a href="#section5">Current Students</a>
 					<ul class="sub-menu">
 						<li><a href="#section2">AMS</a></li>
-						<li><a href="#section3">Student Login</a></li>
+						<li><a href="#section3">E-Learning</a></li>
 					</ul>
 				</li>
 
@@ -71,15 +65,12 @@ https://templatemo.com/tm-557-grad-school
 					</ul>
 				</li>
 
-				<li><a href="">Contact</a></li>
+				<li><a href="">About</a></li>
 			</ul>
 		</nav>
 
 	</header>
-	<!-- ***** Header Area End ***** -->
-
-
-	<!-- ***** Main Banner Area Start ***** -->
+	
 	<section class="section main-banner" id="top" data-section="section1">
 		<div class ="bg-image">
 			<img src="{{ asset('/frontend/assets/images/artist-bg.jpg') }}">
@@ -94,7 +85,6 @@ https://templatemo.com/tm-557-grad-school
 			</div>
 		</div>
 	</section>
-	<!-- ***** Main Banner Area End ***** -->
 
 	<section class="features">
 		<div class="container">
@@ -129,10 +119,10 @@ https://templatemo.com/tm-557-grad-school
 					<div class="features-post third-features">
 						<div class="features-content">
 							<div class="content-show">
-								<h4><i class="fa fa-book">Alumni</i></h4>
+								<h4><i class="fa fa-book"></i>Transfer</h4>
 							</div>
 							<div class="content-hide">
-								<p>The  Alumni Relations Office is an international alumni office established with the support of Versity University Foundation to promote and coordinate activities world-wide. The Alumni Relations office is responsible for promoting the interests of Versity Alumni worldwide.</p>
+								<p>If you have completed courses at another accredited university or college, you can apply to Versity as a transfer student.</p>
 								<div class="scroll-to-section"><a href="">More Info.</a></div>
 							</div>
 						</div>
@@ -180,7 +170,7 @@ https://templatemo.com/tm-557-grad-school
 									</div>
 									<div class="col-md-6">
 										<h4>Mission Statement</h4>
-										<p>OCAD University advances interdisciplinary art and design education and research grounded in liberal arts and science and driven by leading-edge technologies, innovative teaching and professional practice.</p>
+										<p>Versity advances interdisciplinary art and design education and research grounded in liberal arts and science and driven by leading-edge technologies, innovative teaching and professional practice.</p>
 									</div>
 								</div>
 							</article>
@@ -193,7 +183,7 @@ https://templatemo.com/tm-557-grad-school
 									</div>
 									<div class="col-md-6">
 										<h4>Academic Plan</h4>
-										<p>As you navigate through this six-year plan, you'll discover seven priorities with corresponding objectives that interconnect with this vision and take into consideration the current context in which we live. These speak to creating space to facilitate and nurture the growth and success of the next-generation of artists, designers and scholars as they tackle some of the most complex challenges of our time.</p>
+										<p>As you navigate through this four-year plan, you'll discover seven priorities with corresponding objectives that interconnect with this vision and take into consideration the current context in which we live.</p>
 									</div>
 								</div>
 							</article>
@@ -377,11 +367,11 @@ https://templatemo.com/tm-557-grad-school
 		</div>
 	</section>
 
-	<section class="section about" data-section="section6">
+	<section class="section about" data-section="section5">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
-					<h6 class="text-uppercase"><em>Connect</em></h6>
+					<h6 class="text-uppercase">Connect</h6>
 					<nav>
 						<ul class="footer-links nav flex-column">
 							<li class="nav-item">
@@ -394,7 +384,7 @@ https://templatemo.com/tm-557-grad-school
 								<a href="" title="LinkedIn">LinkedIn</a>
 							</li> 
 							<li class="nav-item">
-								<a href="//www.youtube.com/ocaduniversity" title="YouTube">YouTube</a>
+								<a href="" title="YouTube">YouTube</a>
 							</li> 
 							<li class="nav-item">
 								<a href="" title="Instagram">Instagram</a>
@@ -404,7 +394,7 @@ https://templatemo.com/tm-557-grad-school
 				</div> 
 
 				<div class="col-md-3">
-					<h6 class="text-uppercase"><em>Study</em></h6> 
+					<h6 class="text-uppercase">Study</h6> 
 					<nav>
 						<ul class="footer-links nav flex-column">
 							<li class="nav-item">
@@ -414,17 +404,17 @@ https://templatemo.com/tm-557-grad-school
 								<a href="" title="Undergraduate Programs">Undergraduate Programs</a>
 							</li> 
 							<li class="nav-item">
-								<a href="" title="Graduate Studies">Graduate Studies</a>
+								<a href="" title="Graduate Studies">Graduate Programs</a>
 							</li> 
 							<li class="nav-item">
-								<a href="" title="Continuing Studies">Continuing Studies</a>
+								<a href="" title="Transfer to Versity">Transfer to Versity</a>
 							</li>
 						</ul>
 					</nav>
 				</div> 
 
 				<div class="col-md-3">
-					<h6 class="text-uppercase"><em>Work</em></h6> 
+					<h6 class="text-uppercase">Work</h6> 
 					<nav>
 						<ul class="footer-links nav flex-column">
 							<li class="nav-item">
@@ -441,20 +431,21 @@ https://templatemo.com/tm-557-grad-school
 				</div> 
 				
 				<div class="col-md-3">
-					<h6 class="text-uppercase"><em>Contact</em></h6> 
+					<h6 class="text-uppercase">Contact</h6> 
 					<nav>
 						<ul class="footer-links nav flex-column">
-							<li class="nav-item text-white">416.977.6000</li> 
 							<li class="nav-item">
-								<a href="/about/media" title="Media">Media</a>
-							</li> 
-							<li class="nav-item">
-								<a href="https://map.ocadu.ca/" title="Campus Map" target="_blank">Campus Map</a>
-							</li> 
-							<li class="nav-item text-white">100 McCaul Street, Toronto, Ontario, Canada, M5T 1W1</li> 
-							<li class="nav-item">
-								<a href="/about/accessibility" target="_blank">Accessibility at OCAD U</a>
+								<a href="" title="Phone">0720022222</a>
 							</li>
+							<li class="nav-item">
+								<a href="" title="Email">contact@versity.edu</a>
+							</li> 
+							<li class="nav-item">
+								<a href="" title="Postal Address">P.O. Box 00000 City Square</a>
+							</li> 
+							<li class="nav-item ">
+								<a href="" title="Location">Versity Lane, off Versity Road, Nairobi, Kenya </a>
+							</li> 
 						</ul>
 					</nav>
 				</div>
