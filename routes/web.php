@@ -15,15 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('versity.home');
-});
+})->name('home');
 
 Route::get('/undergrad_admissions', function () {
     return view('versity.undergrad_admissions');
-});
+})->name('undergrad_admissions');
 
 Route::get('/versity/grad_admissions', function () {
     return view('versity.grad_admissions');
-});
+})->name('grad_admissions');
 
 Route::get('/backend/admin', function () {
     return view('backend.admin');
