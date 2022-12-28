@@ -41,16 +41,12 @@ https://templatemo.com/tm-557-grad-school
 		<nav id="menu" class="main-nav" role="navigation">
 			<ul class="main-menu">
 
-				<li class="has-submenu"><a href="">Future Students</a>
-					<ul class="sub-menu">
-						<li><a href="{{ route('undergrad_admissions') }}">Undergraduate Admissions</a></li>
-						<li><a href="#section3">Graduate Admissions</a></li>
-					</ul>
-				</li>
+				<li><a href="{{ route('undergrad_admissions') }}">Future Students</a></li>
 
-				<li class="has-submenu"><a href="">Current Students</a>
+				<li class="has-submenu"><a href="">Current Students </a>
 					<ul class="sub-menu">
-						<li><a href="#section2">Student Login</a></li>
+						<li><a href="#section2">AMS Login</a></li>
+						<li><a href="#section3">E-Learning Login</a></li>
 					</ul>
 				</li>
 
@@ -82,11 +78,22 @@ https://templatemo.com/tm-557-grad-school
 		<div class="image-overlay header-text">
 			<div class="caption">
 				<h2>Undergaduate Admissions</h2>
-				<div class="main-button">
-					<a href="{{ route('grad_admissions') }}">
-						<h6>Looking for <em>Graduate Admissions?</em></h6>
-					</a>
-				</div>
+
+				<ul class="admission-process">
+					<li>
+						<p>Step 1: Register for Admission below.</p>
+					</li>
+					<li>
+						<p>Step 2: Fill in Admission Form.</p>
+					</li>
+					<li>
+						<p>Step 3: Scan and Share Academic Certificates.</p>
+					</li>
+					<li>
+						<p>Step 4: Pay Admission Fee.</p>
+					</li>
+				</ul>
+
 			</div>
 		</div>
 	</section>
@@ -218,29 +225,15 @@ https://templatemo.com/tm-557-grad-school
 	</section>
 
 	<section class="section application">
-		<div class="heading-app">
-			<h2>Undergraduate Admission</h2>
-			<p>Please fill in the form carefully and make sure all information is accurate</p>
-		</div>
-
 		<div class="container-app">
-			<form action="post">
-				<label for="fname">First name</label>
-				<input id="fname" name="fname" type="text" required /><br>
+			<div class="heading-app">
+				<h2>Register for Undergraduate Admission</h2>
+				<p>Please fill in the form carefully and make sure all information is accurate</p>
+			</div>
 
-				<label for="lname">Last name</label>
-				<input id="lname" name="lname" type="text" required /><br>
-
-				<label for="dob">Date of birth</label>
-				<input id="dob" name="dob" type="date" required /><br>
-
-				<div class="gender">
-					<label for="gender">Gender</label>
-					<input type="radio" value="none" id="male" name="gender" />
-					<label for="male" class="radio">Male</label>
-					<input type="radio" value="none" id="female" name="gender" />
-					<label for="female" class="radio">Female</label>
-				</div>
+			<form action="" method="post">
+				<label for="name">Full Name</label>
+				<input id="name" name="name" type="text" required /><br>
 
 				<label for="phone">Phone Number</label>
 				<input id="phone" name="phone" type="number" required /><br>
@@ -248,13 +241,10 @@ https://templatemo.com/tm-557-grad-school
 				<label for="email">Email</label>
 				<input id="email" name="email" type="email" required /><br>
 
-				<label for="country">Country</label>
-				<input id="country" name="country" type="text" required /><br>
+				<label for="password">Password</label>
+				<input id="password" name="password" type="password" required /><br>
 
-				<label for="address">Street Address</label>
-				<input id="address" name="address" type="text" required /><br>
-
-				<input type="submit" value="Apply">
+				<input type="submit" value="Create Account">
 			</form>
 		</div>
 	</section>
@@ -290,13 +280,13 @@ https://templatemo.com/tm-557-grad-school
 					<nav>
 						<ul class="footer-links nav flex-column">
 							<li class="nav-item">
-								<a href="" title="Admissions">Admissions</a>
+								<a href="{{ route('undergrad_admissions') }}" title="Admissions">Undergraduate Admissions</a>
 							</li>
 							<li class="nav-item">
-								<a href="{{ route('undergrad_admissions') }}" title="Undergraduate Programs">Undergraduate Programs</a>
+								<a href="{{ route('faculty_of_art') }}" title="Faculty of Art">Faculty of Art</a>
 							</li>
 							<li class="nav-item">
-								<a href="{{ route('grad_admissions') }}" title="Graduate Programs">Graduate Programs</a>
+								<a href="{{ route('faculty_of_design') }}" title="Faculty of Design">Faculty of Design</a>
 							</li>
 						</ul>
 					</nav>

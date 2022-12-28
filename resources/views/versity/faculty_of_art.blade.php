@@ -41,16 +41,12 @@ https://templatemo.com/tm-557-grad-school
 		<nav id="menu" class="main-nav" role="navigation">
 			<ul class="main-menu">
 
-				<li class="has-submenu"><a href="">Future Students</a>
-					<ul class="sub-menu">
-						<li><a href="{{ route('undergrad_admissions') }}">Undergraduate Admissions</a></li>
-						<li><a href="#section3">Graduate Admissions</a></li>
-					</ul>
-				</li>
+				<li><a href="{{ route('undergrad_admissions') }}">Future Students</a></li>
 
-				<li class="has-submenu"><a href="">Current Students</a>
+				<li class="has-submenu"><a href="">Current Students </a>
 					<ul class="sub-menu">
-						<li><a href="#section2">Student Login</a></li>
+						<li><a href="#section2">AMS Login</a></li>
+						<li><a href="#section3">E-Learning Login</a></li>
 					</ul>
 				</li>
 
@@ -63,9 +59,8 @@ https://templatemo.com/tm-557-grad-school
 
 				<li class="has-submenu"><a href="">Faculty</a>
 					<ul class="sub-menu">
-						<li><a href="#section2">Faculty of Art</a></li>
-						<li><a href="#section3">Faculty of Design</a></li>
-						<li><a href="#section3">Faculty of Arts and Science</a></li>
+						<li><a href="{{ route('faculty_of_art') }}">Faculty of Art</a></li>
+						<li><a href="{{ route('faculty_of_design') }}">Faculty of Design</a></li>
 					</ul>
 				</li>
 
@@ -83,8 +78,7 @@ https://templatemo.com/tm-557-grad-school
 		<div class="image-overlay header-text">
 			<div class="caption">
 				<h2>Faculty of Art</h2>
-				<p>Educating artists and cultural practitioners who will shape the age of imagination and redefine the meaning of contemporary art practice.
-				<p>
+				<p>Educating artists and cultural practitioners who will shape the age of imagination and redefine the meaning of contemporary art practice.</p>
 			</div>
 		</div>
 	</section>
@@ -197,13 +191,13 @@ https://templatemo.com/tm-557-grad-school
 					<nav>
 						<ul class="footer-links nav flex-column">
 							<li class="nav-item">
-								<a href="" title="Admissions">Admissions</a>
+								<a href="{{ route('undergrad_admissions') }}" title="Admissions">Undergraduate Admissions</a>
 							</li>
 							<li class="nav-item">
-								<a href="{{ route('undergrad_admissions') }}" title="Undergraduate Programs">Undergraduate Programs</a>
+								<a href="{{ route('faculty_of_art') }}" title="Faculty of Art">Faculty of Art</a>
 							</li>
 							<li class="nav-item">
-								<a href="{{ route('grad_admissions') }}" title="Graduate Programs">Graduate Programs</a>
+								<a href="{{ route('faculty_of_design') }}" title="Faculty of Design">Faculty of Design</a>
 							</li>
 						</ul>
 					</nav>

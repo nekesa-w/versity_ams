@@ -41,16 +41,12 @@ https://templatemo.com/tm-557-grad-school
 		<nav id="menu" class="main-nav" role="navigation">
 			<ul class="main-menu">
 
-				<li class="has-submenu"><a href="">Future Students</a>
-					<ul class="sub-menu">
-						<li><a href="{{ route('undergrad_admissions') }}">Undergraduate Admissions</a></li>
-						<li><a href="#section3">Graduate Admissions</a></li>
-					</ul>
-				</li>
+				<li><a href="{{ route('undergrad_admissions') }}">Future Students</a></li>
 
-				<li class="has-submenu"><a href="">Current Students</a>
+				<li class="has-submenu"><a href="">Current Students </a>
 					<ul class="sub-menu">
-						<li><a href="#section2">Student Login</a></li>
+						<li><a href="#section2">AMS Login</a></li>
+						<li><a href="#section3">E-Learning Login</a></li>
 					</ul>
 				</li>
 
@@ -98,12 +94,12 @@ https://templatemo.com/tm-557-grad-school
 					<div class="features-post">
 						<div class="features-content">
 							<div class="content-show">
-								<h4><i class="fa fa-pencil"></i>Undergraduate</h4>
+								<h4><i class="fa fa-pencil"></i>School</h4>
 							</div>
 							<div class="content-hide">
 								<p> With so many programs to choose from, it can be overwhelming to find a program that best suits you. Explore our undergraduate majors and get ready to reach your full potential.
 								<p>
-								<div class="scroll-to-section"><a href="undergrad_admissions">View Courses.</a></div>
+								<div class="scroll-to-section"><a href="{{ route('undergrad_admissions') }}">More Info.</a></div>
 							</div>
 						</div>
 					</div>
@@ -112,11 +108,11 @@ https://templatemo.com/tm-557-grad-school
 					<div class="features-post second-features">
 						<div class="features-content">
 							<div class="content-show">
-								<h4><i class="fa fa-graduation-cap"></i>Graduate</h4>
+								<h4><i class="fa fa-graduation-cap"></i>Art</h4>
 							</div>
 							<div class="content-hide">
-								<p> Versity has a long standing tradition of contemporary thinking and practice in art and design. Our graduate degree programs offer the next generation of artists, designers and industry leaders a level of scholarship that is virtually unmatched.</p>
-								<div class="scroll-to-section"><a href="grad_admissions">View Courses</a></div>
+								<p>Educating artists and cultural practitioners who will shape the age of imagination and redefine the meaning of contemporary art practice.</p>
+								<div class="scroll-to-section"><a href="{{ route('faculty_of_art') }}">View Courses</a></div>
 							</div>
 						</div>
 					</div>
@@ -125,10 +121,12 @@ https://templatemo.com/tm-557-grad-school
 					<div class="features-post third-features">
 						<div class="features-content">
 							<div class="content-show">
-								<h4><i class="fa fa-book"></i>Alumni</h4>
+								<h4><i class="fa fa-book"></i> Design</h4>
 							</div>
 							<div class="content-hide">
-								<p>Whether you graduated 20 years ago or last year, you will always be part of Versity School of Art & Design. Please contact the Alumni Relations Office at alumni@versity.ke to keep in touch.</p>
+								<p>Creating objects, communications, environments and experiences that nurture community, harmonize technology, satisfy needs and empower individuals.</p>
+								</p>
+								<div class="scroll-to-section"><a href="{{ route('faculty_of_design') }}"> View Courses</a></div>
 							</div>
 						</div>
 					</div>
@@ -245,13 +243,13 @@ https://templatemo.com/tm-557-grad-school
 					<nav>
 						<ul class="footer-links nav flex-column">
 							<li class="nav-item">
-								<a href="" title="Admissions">Admissions</a>
+								<a href="{{ route('undergrad_admissions') }}" title="Admissions">Undergraduate Admissions</a>
 							</li>
 							<li class="nav-item">
-								<a href="{{ route('undergrad_admissions') }}" title="Undergraduate Programs">Undergraduate Programs</a>
+								<a href="{{ route('faculty_of_art') }}" title="Faculty of Art">Faculty of Art</a>
 							</li>
 							<li class="nav-item">
-								<a href="{{ route('grad_admissions') }}" title="Graduate Programs">Graduate Programs</a>
+								<a href="{{ route('faculty_of_design') }}" title="Faculty of Design">Faculty of Design</a>
 							</li>
 						</ul>
 					</nav>

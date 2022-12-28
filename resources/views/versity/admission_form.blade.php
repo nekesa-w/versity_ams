@@ -16,7 +16,7 @@ https://templatemo.com/tm-557-grad-school
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Faculty of Design </title>
+    <title> Undergaduate Admissions </title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('/frontend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -72,13 +72,28 @@ https://templatemo.com/tm-557-grad-school
 
     <section class="section main-banner" id="top" data-section="section1">
         <div class="bg-image">
-            <img src="{{ asset('/frontend/assets/images/facultydesign.jpg') }}">
+            <img src="{{ asset('/frontend/assets/images/artist-bg.jpg') }}">
         </div>
 
         <div class="image-overlay header-text">
             <div class="caption">
-                <h2>Faculty of Design</h2>
-                <p>Creating objects, communications, environments and experiences that nurture community, harmonize technology, satisfy needs and empower individuals.</p>
+                <h2>Undergaduate Admissions</h2>
+
+                <ul class="admission-process">
+                    <li>
+                        <p>Step 1: Register for Admission below.</p>
+                    </li>
+                    <li>
+                        <p>Step 2: Fill in Admission Form.</p>
+                    </li>
+                    <li>
+                        <p>Step 3: Scan and Share Academic Certificates.</p>
+                    </li>
+                    <li>
+                        <p>Step 4: Pay Admission Fee.</p>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </section>
@@ -92,6 +107,70 @@ https://templatemo.com/tm-557-grad-school
                     </div>
                 </div>
                 <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="{{ asset('/frontend/assets/images/expanimation.jpg') }}" alt="Experimental Animation">
+                        <div class="down-content">
+                            <h4>Experimental Animation</h4>
+                            <p>Learn the skills to bring your imagination to life in the new Experimental Animation program.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{{ asset('/frontend/assets/images/printmaking.jpg') }}" alt="Printmaking & Publications">
+                        <div class="down-content">
+                            <h4>Printmaking & Publications</h4>
+                            <p>Explore our broad approach to contemporary printmaking and publications through prints, books, zines, multiples and installation.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{{ asset('/frontend/assets/images/photography.jpeg') }}" alt="Photography">
+                        <div class="down-content">
+                            <h4>Photography</h4>
+                            <p>Approached as a fine-art medium within contemporary art practice, the Photography program emphasizes the development of your artistic vision.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{{ asset('/frontend/assets/images/drawingpaint.jpg') }}" alt="Drawing & Painting">
+                        <div class="down-content">
+                            <h4>Drawing & Painting</h4>
+                            <p>Perceive, read and translate the visual world into personal forms of pictorial expression and representation.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{{ asset('/frontend/assets/images/intmedia.jpg') }}" alt="Integrated Media">
+                        <div class="down-content">
+                            <h4>Integrated Media</h4>
+                            <p>Integrated Media is an innovative digital and time-based area that encourages an interdisciplinary exploration of media practices.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{{ asset('/frontend/assets/images/sculpt.jpg') }}" alt="Sculpture &Installation">
+                        <div class="down-content">
+                            <h4>Sculpture & Installation</h4>
+                            <p>Sculpture & Installation students experiment with the making and transformation of three-dimensional objects in relation to other components, such as space, sound, text and images.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{{ asset('/frontend/assets/images/crosdisc.jpg') }}" alt="Cross-Disciplinary Art: Life Studies">
+                        <div class="down-content">
+                            <h4>Cross-Disciplinary Art: Life Studies</h4>
+                            <p>Mapping all existing and potential studies of the figure and the body in contemporary art practices.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{{ asset('/frontend/assets/images/critic.jpg') }}" alt="Criticism & Curatorial Practice">
+                        <div class="down-content">
+                            <h4>Criticism & Curatorial Practice</h4>
+                            <p>This cross-disciplinary area is the first undergraduate program in Canada designed to educate artists as curators and critics.</p>
+                        </div>
+                    </div>
+
                     <div class="item">
                         <img src="{{ asset('/frontend/assets/images/advertising.webp') }}" alt="Advertising">
                         <div class="down-content">
@@ -141,6 +220,49 @@ https://templatemo.com/tm-557-grad-school
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section application">
+        <div class="container-app">
+            <div class="heading-app">
+                <h2>Register for Undergraduate Admission</h2>
+                <p>Please fill in the form carefully and make sure all information is accurate</p>
+            </div>
+
+            <form action="post">
+                <label for="fname">First name</label>
+                <input id="fname" name="fname" type="text" required /><br>
+
+                <label for="lname">Last name</label>
+                <input id="lname" name="lname" type="text" required /><br>
+
+                <label for="dob">Date of birth</label>
+                <input id="dob" name="dob" type="date" required /><br>
+
+                <div class="gender">
+                    <label for="gender">Gender</label>
+                    <input type="radio" value="none" id="male" name="gender" />
+                    <label for="male" class="radio">Male</label>
+                    <input type="radio" value="none" id="female" name="gender" />
+                    <label for="female" class="radio">Female</label>
+                </div>
+
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="number" required /><br>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required /><br>
+
+                <label for="country">Country</label>
+                <input id="country" name="country" type="text" required /><br>
+
+                <label for="address">Street Address</label>
+                <input id="address" name="address" type="text" required /><br>
+
+                <input type="submit" value="Create Account">
+            </form>
         </div>
     </section>
 
