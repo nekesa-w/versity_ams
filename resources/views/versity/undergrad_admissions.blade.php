@@ -217,6 +217,48 @@ https://templatemo.com/tm-557-grad-school
 		</div>
 	</section>
 
+	<section class="section application">
+		<div class="heading-app">
+			<h2>Undergraduate Admission</h2>
+			<p>Please fill in the form carefully and make sure all information is accurate</p>
+		</div>
+
+		<div class="container-app">
+			<form action="post">
+				<label for="fname">First name</label>
+				<input id="fname" name="fname" type="text" required /><br>
+
+				<label for="lname">Last name</label>
+				<input id="lname" name="lname" type="text" required /><br>
+
+				<label for="dob">Date of birth</label>
+				<input id="dob" name="dob" type="date" required /><br>
+
+				<div class="gender">
+					<label for="gender">Gender</label>
+					<input type="radio" value="none" id="male" name="gender" />
+					<label for="male" class="radio">Male</label>
+					<input type="radio" value="none" id="female" name="gender" />
+					<label for="female" class="radio">Female</label>
+				</div>
+
+				<label for="phone">Phone Number</label>
+				<input id="phone" name="phone" type="number" required /><br>
+
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email" required /><br>
+
+				<label for="country">Country</label>
+				<input id="country" name="country" type="text" required /><br>
+
+				<label for="address">Street Address</label>
+				<input id="address" name="address" type="text" required /><br>
+
+				<input type="submit" value="Apply">
+			</form>
+		</div>
+	</section>
+
 	<section class="section about" data-section="section5">
 		<div class="container">
 			<div class="row">
