@@ -16,7 +16,7 @@ https://templatemo.com/tm-557-grad-school
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title> Versity | Home </title>
+	<title> Undergraduate Admissions </title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="{{asset('/frontend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -41,12 +41,16 @@ https://templatemo.com/tm-557-grad-school
 		<nav id="menu" class="main-nav" role="navigation">
 			<ul class="main-menu">
 
-				<li><a href="">Future Students</a></li>
+			<li class="has-submenu"><a href="#section5">Future Students</a>
+					<ul class="sub-menu">
+						<li><a href="#section2">Undergraduate Admissions</a></li>
+						<li><a href="#section3">Graduate Admissions</a></li>
+						</ul>
+				</li>
 
 				<li class="has-submenu"><a href="#section5">Current Students</a>
 					<ul class="sub-menu">
-						<li><a href="#section2">AMS</a></li>
-						<li><a href="#section3">E-Learning</a></li>
+						<li><a href="#section2">Student Login</a></li>
 					</ul>
 				</li>
 
@@ -59,9 +63,9 @@ https://templatemo.com/tm-557-grad-school
 
 				<li class="has-submenu"><a href="#section5">Courses</a>
 					<ul class="sub-menu">
-						<li><a href="#section2">Faculty of Art</a></li>
-						<li><a href="#section3">Faculty of Design</a></li>
-						<li><a href="#section3">Faculty of Arts and Science</a></li>
+						<li><a href="faculty_of_art">Faculty of Art</a></li>
+						<li><a href="faculty_of_design">Faculty of Design</a></li>
+						<li><a href="faculty_of_arts_and_science">Faculty of Arts and Science</a></li>
 					</ul>
 				</li>
 
@@ -78,18 +82,132 @@ https://templatemo.com/tm-557-grad-school
 
 		<div class="image-overlay header-text">
 			<div class="caption">
-				<h2>Versity School <br> of Art & Design</h2>
-				<div class="main-button">
-					<a href=""><h6>Apply <em>Today</em></h6></a>
+				<h2>Undergraduate <br> Admissions</h2>
+			</div>
+		</div>
+	</section>
+
+	<section class="features">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-12">
+					<div class="features-post">
+						<div class="features-content">
+							<div class="content-show">
+								<h4><i class="fa fa-pencil"></i>Undergraduate</h4>
+							</div>
+							<div class="content-hide">
+								<p> With so many programs to choose from, it can be overwhelming to find a program that best suits you. Explore our undergraduate majors and get ready to reach your full potential. <p>
+								<div class="scroll-to-section"><a href="undergrad_admissions">View Courses.</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-12">
+					<div class="features-post second-features">
+						<div class="features-content">
+							<div class="content-show">
+								<h4><i class="fa fa-graduation-cap"></i>Graduate</h4>
+							</div>
+							<div class="content-hide">
+								<p> Versity has a long standing tradition of contemporary thinking and practice in art and design. Our graduate degree programs offer the next generation of artists, designers and industry leaders a level of scholarship that is virtually unmatched.</p>
+								<div class="scroll-to-section"><a href="grad_admissions">View Courses</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-12">
+					<div class="features-post third-features">
+						<div class="features-content">
+							<div class="content-show">
+								<h4><i class="fa fa-book"></i>Alumni</h4>
+							</div>
+							<div class="content-hide">
+								<p>Whether you graduated 20 years ago or last year, you will always be part of Versity School of Art & Design. Please contact the Alumni Relations Office at alumni@versity.ke to keep in touch.</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-    <section class="">
-        
-    </section>
-	
+	<section class="section why-us" data-section="section2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-heading">
+						<h2>Why choose Versity?</h2>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div id='tabs'>
+						<ul>
+							<li><a href='#tabs-1'>Vision Statement</a></li>
+							<li><a href='#tabs-2'>Mission Statment</a></li>
+							<li><a href='#tabs-3'>Academic Plan </a></li>
+						</ul>
+						<section class='tabs-content'>
+							<article id='tabs-1'>
+								<div class="row">
+									<div class="col-md-6">
+										<div class = "why-us-photo">
+											<img src="{{ asset('frontend/assets/images/choose1.jpg') }}" alt="">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<h4>Vision</h4>
+										<p>Versity School of Design is a vibrant community of bold, curious and compassionate artists, designers and scholars imagining and creating a joyful, equitable and sustainable world.</p>
+									</div>
+								</div>
+							</article>
+							<article id='tabs-2'>
+								<div class="row">
+									<div class="col-md-6">
+										<div class = "why-us-photo">
+											<img src="{{ asset('frontend/assets/images/choose2.jpg') }}" alt="">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<h4>Mission Statement</h4>
+										<p>Versity advances interdisciplinary art and design education and research grounded in liberal arts and science and driven by leading-edge technologies, innovative teaching and professional practice.</p>
+									</div>
+								</div>
+							</article>
+							<article id='tabs-3'>
+								<div class="row">
+									<div class="col-md-6">
+										<div class = "why-us-photo">
+											<img src="{{ asset('frontend/assets/images/choose3.jpg') }}" alt="">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<h4>Academic Plan</h4>
+										<p>As you navigate through this four-year plan, you'll discover seven priorities with corresponding objectives that interconnect with this vision and take into consideration the current context in which we live.</p>
+									</div>
+								</div>
+							</article>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section campus" data-section="section3">
+		<div class ="campus-image">
+			<img src="{{ asset('/frontend/assets/images/campus.jpg') }}">
+		</div>
+
+		<div class="campus-overlay header-text">
+			<div class="caption">
+				<h2>“Creativity takes courage.”
+				<br>- Henri Matisse </h2>
+				<p></p>
+			</div>
+		</div>
+	</section>
+
 	<section class="section about" data-section="section5">
 		<div class="container">
 			<div class="row">
@@ -129,9 +247,6 @@ https://templatemo.com/tm-557-grad-school
 							<li class="nav-item">
 								<a href="" title="Graduate Studies">Graduate Programs</a>
 							</li> 
-							<li class="nav-item">
-								<a href="" title="Transfer to Versity">Transfer to Versity</a>
-							</li>
 						</ul>
 					</nav>
 				</div> 
@@ -158,16 +273,16 @@ https://templatemo.com/tm-557-grad-school
 					<nav>
 						<ul class="footer-links nav flex-column">
 							<li class="nav-item">
-								<a href="" title="Phone">0720022222</a>
+								<p>0720022222</p>
 							</li>
 							<li class="nav-item">
-								<a href="" title="Email">contact@versity.edu</a>
+								<p>contact@versity.edu</p>
 							</li> 
 							<li class="nav-item">
-								<a href="" title="Postal Address">P.O. Box 00000 City Square</a>
+								<p>P.O. Box 00000 City Square</p>
 							</li> 
 							<li class="nav-item ">
-								<a href="" title="Location">Versity Lane, off Versity Road, Nairobi, Kenya </a>
+								<p>Versity Lane, off Versity Road, Nairobi, Kenya </p>
 							</li> 
 						</ul>
 					</nav>

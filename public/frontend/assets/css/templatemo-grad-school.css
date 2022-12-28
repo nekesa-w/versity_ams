@@ -21,7 +21,7 @@ a {
 }
 
 a:hover {
-	color: #e660a3;
+	color: #e8a3ca;
 	text-decoration: none;
 }
 
@@ -1238,7 +1238,7 @@ section.about li{
 	padding: 5px 0px;
 }
 
-section.about a{
+section.about a, section.about p{
 	padding: 10px 0px;
 	color: #8a3c68;
 	font-size: 15px;
@@ -1248,9 +1248,13 @@ section.about a{
 	text-align: center;
 }
 
+section.about p{
+  margin: 0;
+  padding: 0;
+}
 
 section.about a:hover {
-	color: #c175a0;
+	color: #e8a3ca;
 }
 
 section.about container {

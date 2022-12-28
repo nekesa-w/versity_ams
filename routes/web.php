@@ -14,15 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('versity.home');
 });
 
-Auth::routes();
+Route::get('/undergrad_admissions', function () {
+    return view('versity.undergrad_admissions');
+});
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/frontend/index', function () {
-    return view('frontend.index');
+Route::get('/versity/grad_admissions', function () {
+    return view('versity.grad_admissions');
 });
 
 Route::get('/backend/admin', function () {

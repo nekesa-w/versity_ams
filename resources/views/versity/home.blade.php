@@ -16,7 +16,7 @@ https://templatemo.com/tm-557-grad-school
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title> Versity | Home </title>
+	<title> Home </title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="{{asset('/frontend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -41,12 +41,16 @@ https://templatemo.com/tm-557-grad-school
 		<nav id="menu" class="main-nav" role="navigation">
 			<ul class="main-menu">
 
-				<li><a href="">Future Students</a></li>
+			<li class="has-submenu"><a href="#section5">Future Students</a>
+					<ul class="sub-menu">
+						<li><a href="undergrad_admissions">Undergraduate Admissions</a></li>
+						<li><a href="#section3">Graduate Admissions</a></li>
+						</ul>
+				</li>
 
 				<li class="has-submenu"><a href="#section5">Current Students</a>
 					<ul class="sub-menu">
-						<li><a href="#section2">AMS</a></li>
-						<li><a href="#section3">E-Learning</a></li>
+						<li><a href="#section2">Student Login</a></li>
 					</ul>
 				</li>
 
@@ -97,7 +101,7 @@ https://templatemo.com/tm-557-grad-school
 							</div>
 							<div class="content-hide">
 								<p> With so many programs to choose from, it can be overwhelming to find a program that best suits you. Explore our undergraduate majors and get ready to reach your full potential. <p>
-								<div class="scroll-to-section"><a href="#">View Courses.</a></div>
+								<div class="scroll-to-section"><a href="undergrad_admissions">View Courses.</a></div>
 							</div>
 						</div>
 					</div>
@@ -110,7 +114,7 @@ https://templatemo.com/tm-557-grad-school
 							</div>
 							<div class="content-hide">
 								<p> Versity has a long standing tradition of contemporary thinking and practice in art and design. Our graduate degree programs offer the next generation of artists, designers and industry leaders a level of scholarship that is virtually unmatched.</p>
-								<div class="scroll-to-section"><a href="#">View Courses</a></div>
+								<div class="scroll-to-section"><a href="grad_admissions">View Courses</a></div>
 							</div>
 						</div>
 					</div>
@@ -119,11 +123,10 @@ https://templatemo.com/tm-557-grad-school
 					<div class="features-post third-features">
 						<div class="features-content">
 							<div class="content-show">
-								<h4><i class="fa fa-book"></i>Transfer</h4>
+								<h4><i class="fa fa-book"></i>Alumni</h4>
 							</div>
 							<div class="content-hide">
-								<p>If you have completed courses at another accredited university or college, you can apply to Versity as a transfer student.</p>
-								<div class="scroll-to-section"><a href="">More Info.</a></div>
+								<p>Whether you graduated 20 years ago or last year, you will always be part of Versity School of Art & Design. Please contact the Alumni Relations Office at alumni@versity.ke to keep in touch.</p>
 							</div>
 						</div>
 					</div>
@@ -208,165 +211,6 @@ https://templatemo.com/tm-557-grad-school
 		</div>
 	</section>
 
-	<section class="section courses" data-section="section4">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section-heading">
-						<h2>Choose Your Course</h2>
-					</div>
-				</div>
-
-				<div class="owl-carousel owl-theme">
-					<div class="item">
-						<img src="assets/images/courses-01.jpg" alt="Course #1">
-						<div class="down-content">
-							<h4>Digital Marketing</h4>
-							<p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-							<div class="author-image">
-								<img src="assets/images/author-01.png" alt="Author 1">
-							</div>
-							<div class="text-button-pay">
-								<a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<img src="assets/images/courses-02.jpg" alt="Course #2">
-						<div class="down-content">
-							<h4>Business World</h4>
-							<p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</p>
-							<div class="author-image">
-								<img src="assets/images/author-02.png" alt="Author 2">
-							</div>
-							<div class="text-button-free">
-								<a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<img src="assets/images/courses-03.jpg" alt="Course #3">
-						<div class="down-content">
-							<h4>Media Technology</h4>
-							<p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-							<div class="author-image">
-								<img src="assets/images/author-03.png" alt="Author 3">
-							</div>
-							<div class="text-button-pay">
-								<a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<img src="assets/images/courses-04.jpg" alt="Course #4">
-						<div class="down-content">
-							<h4>Communications</h4>
-							<p>Download free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-							<div class="author-image">
-								<img src="assets/images/author-04.png" alt="Author 4">
-							</div>
-							<div class="text-button-free">
-								<a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<img src="assets/images/courses-05.jpg" alt="">
-						<div class="down-content">
-							<h4>Business Ethics</h4>
-							<p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-							<div class="author-image">
-								<img src="assets/images/author-05.png" alt="">
-							</div>
-							<div class="text-button-pay">
-								<a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<img src="assets/images/courses-01.jpg" alt="">
-						<div class="down-content">
-							<h4>Photography</h4>
-							<p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</p>
-							<div class="author-image">
-								<img src="assets/images/author-01.png" alt="">
-							</div>
-							<div class="text-button-free">
-								<a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<img src="assets/images/courses-02.jpg" alt="">
-						<div class="down-content">
-							<h4>Web Development</h4>
-							<p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-							<div class="author-image">
-								<img src="assets/images/author-02.png" alt="">
-							</div>
-							<div class="text-button-free">
-								<a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<img src="assets/images/courses-03.jpg" alt="">
-						<div class="down-content">
-							<h4>Learn HTML CSS</h4>
-							<p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-							<div class="author-image">
-								<img src="assets/images/author-03.png" alt="">
-							</div>
-							<div class="text-button-pay">
-								<a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<img src="assets/images/courses-04.jpg" alt="">
-						<div class="down-content">
-							<h4>Social Media</h4>
-							<p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-							<div class="author-image">
-								<img src="assets/images/author-04.png" alt="">
-							</div>
-							<div class="text-button-pay">
-								<a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<img src="assets/images/courses-05.jpg" alt="">
-						<div class="down-content">
-							<h4>Digital Arts</h4>
-							<p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</p>
-							<div class="author-image">
-								<img src="assets/images/author-05.png" alt="">
-							</div>
-							<div class="text-button-free">
-								<a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<img src="assets/images/courses-01.jpg" alt="">
-						<div class="down-content">
-							<h4>Media Streaming</h4>
-							<p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</p>
-							<div class="author-image">
-								<img src="assets/images/author-01.png" alt="">
-							</div>
-							<div class="text-button-pay">
-								<a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
 	<section class="section about" data-section="section5">
 		<div class="container">
 			<div class="row">
@@ -406,9 +250,6 @@ https://templatemo.com/tm-557-grad-school
 							<li class="nav-item">
 								<a href="" title="Graduate Studies">Graduate Programs</a>
 							</li> 
-							<li class="nav-item">
-								<a href="" title="Transfer to Versity">Transfer to Versity</a>
-							</li>
 						</ul>
 					</nav>
 				</div> 
@@ -435,16 +276,16 @@ https://templatemo.com/tm-557-grad-school
 					<nav>
 						<ul class="footer-links nav flex-column">
 							<li class="nav-item">
-								<a href="" title="Phone">0720022222</a>
+								<p>0720022222</p>
 							</li>
 							<li class="nav-item">
-								<a href="" title="Email">contact@versity.edu</a>
+								<p>contact@versity.edu</p>
 							</li> 
 							<li class="nav-item">
-								<a href="" title="Postal Address">P.O. Box 00000 City Square</a>
+								<p>P.O. Box 00000 City Square</p>
 							</li> 
 							<li class="nav-item ">
-								<a href="" title="Location">Versity Lane, off Versity Road, Nairobi, Kenya </a>
+								<p>Versity Lane, off Versity Road, Nairobi, Kenya </p>
 							</li> 
 						</ul>
 					</nav>
