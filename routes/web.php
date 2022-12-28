@@ -33,6 +33,10 @@ Route::get('/versity/faculty_of_design', function () {
     return view('versity.faculty_of_design');
 })->name('faculty_of_design');
 
+Route::get('/versity/faculty_of_art_and_science', function () {
+    return view('versity.faculty_of_art_and_science');
+})->name('faculty_of_art_and_science');
+
 Route::get('/admin', function () {
     return view('admin.home');
 });

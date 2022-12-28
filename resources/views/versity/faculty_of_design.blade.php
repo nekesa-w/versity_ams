@@ -99,66 +99,50 @@ https://templatemo.com/tm-557-grad-school
                 </div>
                 <div class="owl-carousel owl-theme">
                     <div class="item">
-                        <img src="{{ asset('/frontend/assets/images/expanimation.jpg') }}" alt="Experimental Animation">
+                        <img src="{{ asset('/frontend/assets/images/advertising.webp') }}" alt="Advertising">
                         <div class="down-content">
-                            <h4>Experimental Animation</h4>
-                            <p>Learn the skills to bring your imagination to life in the new Experimental Animation program.</p>
+                            <h4>Advertising</h4>
+                            <p>Need over want. Concept before execution. Strategy before style. Messages that combine powerful language and compelling imagery. Recognizing social influence. Developing a sense of accountability.</p>
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="{{ asset('/frontend/assets/images/printmaking.jpg') }}" alt="Printmaking & Publications">
+                        <img src="{{ asset('/frontend/assets/images/environ.jpg') }}" alt="Environmental Design">
                         <div class="down-content">
-                            <h4>Printmaking & Publications</h4>
-                            <p>Explore our broad approach to contemporary printmaking and publications through prints, books, zines, multiples and installation.</p>
+                            <h4>Environmental Design</h4>
+                            <p>Designing ourselves back into the environment by creating expressive interior and architectural experiences that nurture community.</p>
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="{{ asset('/frontend/assets/images/photography.jpeg') }}" alt="Photography">
+                        <img src="{{ asset('/frontend/assets/images/graphic.jpeg') }}" alt="Graphic Design">
                         <div class="down-content">
-                            <h4>Photography</h4>
-                            <p>Approached as a fine-art medium within contemporary art practice, the Photography program emphasizes the development of your artistic vision.</p>
+                            <h4>Graphic Design</h4>
+                            <p>Minimizing harm and emphasizing the good we can do. Offering a strong focus on design process, typography, image-making and critical, strategic thinking. Mindful design systems for everyone and everything.</p>
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="{{ asset('/frontend/assets/images/drawingpaint.jpg') }}" alt="Drawing & Painting">
+                        <img src="{{ asset('/frontend/assets/images/illustration.jpg') }}" alt="Illustration">
                         <div class="down-content">
-                            <h4>Drawing & Painting</h4>
-                            <p>Perceive, read and translate the visual world into personal forms of pictorial expression and representation.</p>
+                            <h4>Illustration</h4>
+                            <p>Developing one own individual artistic expressions to critically reflect on society. Centered on knowledge and skills that create effective, communicative and artful images that function as a complement to the written word.</p>
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="{{ asset('/frontend/assets/images/intmedia.jpg') }}" alt="Integrated Media">
+                        <img src="{{ asset('/frontend/assets/images/industrial.jpg') }}" alt="Industrial Design">
                         <div class="down-content">
-                            <h4>Integrated Media</h4>
-                            <p>Integrated Media is an innovative digital and time-based area that encourages an interdisciplinary exploration of media practices.</p>
+                            <h4>Industrial Design</h4>
+                            <p>Designing products and processes that take into account the next seven generations, including consumer and commercial products; furniture; interaction and experience design; strategic creativity; applied innovation.</p>
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="{{ asset('/frontend/assets/images/sculpt.jpg') }}" alt="Sculpture &Installation">
+                        <img src="{{ asset('/frontend/assets/images/materialart.jpg') }}" alt="Material Art & Design">
                         <div class="down-content">
-                            <h4>Sculpture & Installation</h4>
-                            <p>Sculpture & Installation students experiment with the making and transformation of three-dimensional objects in relation to other components, such as space, sound, text and images.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{{ asset('/frontend/assets/images/crosdisc.jpg') }}" alt="Cross-Disciplinary Art: Life Studies">
-                        <div class="down-content">
-                            <h4>Cross-Disciplinary Art: Life Studies</h4>
-                            <p>Mapping all existing and potential studies of the figure and the body in contemporary art practices.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{{ asset('/frontend/assets/images/critic.jpg') }}" alt="Criticism & Curatorial Practice">
-                        <div class="down-content">
-                            <h4>Criticism & Curatorial Practice</h4>
-                            <p>This cross-disciplinary area is the first undergraduate program in Canada designed to educate artists as curators and critics.</p>
+                            <h4>Material Art & Design</h4>
+                            <p>Deepening our relationships to the materials that connect us to the craft of making. Offering two concentrations: Jewellery/Metalsmithing and Textiles, allowing students to work from either an art or design perspective.</p>
                         </div>
                     </div>
                 </div>

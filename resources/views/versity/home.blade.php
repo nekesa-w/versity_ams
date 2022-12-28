@@ -65,7 +65,6 @@ https://templatemo.com/tm-557-grad-school
 					<ul class="sub-menu">
 						<li><a href="{{ route('faculty_of_art') }}">Faculty of Art</a></li>
 						<li><a href="{{ route('faculty_of_design') }}">Faculty of Design</a></li>
-						<li><a href="#section3">Faculty of Arts and Science</a></li>
 					</ul>
 				</li>
 
