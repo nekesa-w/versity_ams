@@ -16,7 +16,7 @@ https://templatemo.com/tm-557-grad-school
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title> Home </title>
+	<title> Faculty of Art </title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="{{asset('/frontend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -63,8 +63,8 @@ https://templatemo.com/tm-557-grad-school
 
 				<li class="has-submenu"><a href="">Faculty</a>
 					<ul class="sub-menu">
-						<li><a href="{{ route('faculty_of_art') }}">Faculty of Art</a></li>
-						<li><a href="{{ route('faculty_of_design') }}">Faculty of Design</a></li>
+						<li><a href="#section2">Faculty of Art</a></li>
+						<li><a href="#section3">Faculty of Design</a></li>
 						<li><a href="#section3">Faculty of Arts and Science</a></li>
 					</ul>
 				</li>
@@ -77,140 +77,91 @@ https://templatemo.com/tm-557-grad-school
 
 	<section class="section main-banner" id="top" data-section="section1">
 		<div class="bg-image">
-			<img src="{{ asset('/frontend/assets/images/artist-bg.jpg') }}">
+			<img src="{{ asset('/frontend/assets/images/facultyart.jpg') }}">
 		</div>
 
 		<div class="image-overlay header-text">
 			<div class="caption">
-				<h2>Versity School <br> of Art & Design</h2>
-				<div class="main-button">
-					<a href="{{ route('undergrad_admissions') }}">
-						<h6>Apply <em>Today</em></h6>
-					</a>
-				</div>
+				<h2>Faculty of Art</h2>
+				<p>Educating artists and cultural practitioners who will shape the age of imagination and redefine the meaning of contemporary art practice.
+				<p>
 			</div>
 		</div>
 	</section>
 
-	<section class="features">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 col-12">
-					<div class="features-post">
-						<div class="features-content">
-							<div class="content-show">
-								<h4><i class="fa fa-pencil"></i>Undergraduate</h4>
-							</div>
-							<div class="content-hide">
-								<p> With so many programs to choose from, it can be overwhelming to find a program that best suits you. Explore our undergraduate majors and get ready to reach your full potential.
-								<p>
-								<div class="scroll-to-section"><a href="undergrad_admissions">View Courses.</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-12">
-					<div class="features-post second-features">
-						<div class="features-content">
-							<div class="content-show">
-								<h4><i class="fa fa-graduation-cap"></i>Graduate</h4>
-							</div>
-							<div class="content-hide">
-								<p> Versity has a long standing tradition of contemporary thinking and practice in art and design. Our graduate degree programs offer the next generation of artists, designers and industry leaders a level of scholarship that is virtually unmatched.</p>
-								<div class="scroll-to-section"><a href="grad_admissions">View Courses</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-12">
-					<div class="features-post third-features">
-						<div class="features-content">
-							<div class="content-show">
-								<h4><i class="fa fa-book"></i>Alumni</h4>
-							</div>
-							<div class="content-hide">
-								<p>Whether you graduated 20 years ago or last year, you will always be part of Versity School of Art & Design. Please contact the Alumni Relations Office at alumni@versity.ke to keep in touch.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="section why-us" data-section="section2">
-		<div class="container">
+	<section class="section courses" data-section="section4">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="section-heading">
-						<h2>Why choose Versity?</h2>
+					<div class="course-heading">
+						<h2>Choose Your Course</h2>
 					</div>
 				</div>
-				<div class="col-md-12">
-					<div id='tabs'>
-						<ul>
-							<li><a href='#tabs-1'>Vision Statement</a></li>
-							<li><a href='#tabs-2'>Mission Statment</a></li>
-							<li><a href='#tabs-3'>Academic Plan </a></li>
-						</ul>
-						<section class='tabs-content'>
-							<article id='tabs-1'>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="why-us-photo">
-											<img src="{{ asset('frontend/assets/images/choose1.jpg') }}" alt="">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<h4>Vision</h4>
-										<p>Versity School of Design is a vibrant community of bold, curious and compassionate artists, designers and scholars imagining and creating a joyful, equitable and sustainable world.</p>
-									</div>
-								</div>
-							</article>
-							<article id='tabs-2'>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="why-us-photo">
-											<img src="{{ asset('frontend/assets/images/choose2.jpg') }}" alt="">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<h4>Mission Statement</h4>
-										<p>Versity advances interdisciplinary art and design education and research grounded in liberal arts and science and driven by leading-edge technologies, innovative teaching and professional practice.</p>
-									</div>
-								</div>
-							</article>
-							<article id='tabs-3'>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="why-us-photo">
-											<img src="{{ asset('frontend/assets/images/choose3.jpg') }}" alt="">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<h4>Academic Plan</h4>
-										<p>As you navigate through this four-year plan, you'll discover seven priorities with corresponding objectives that interconnect with this vision and take into consideration the current context in which we live.</p>
-									</div>
-								</div>
-							</article>
-						</section>
+				<div class="owl-carousel owl-theme">
+					<div class="item">
+						<img src="{{ asset('/frontend/assets/images/expanimation.jpg') }}" alt="Experimental Animation">
+						<div class="down-content">
+							<h4>Experimental Animation</h4>
+							<p>Learn the skills to bring your imagination to life in the new Experimental Animation program.</p>
+						</div>
+					</div>
+
+					<div class="item">
+						<img src="{{ asset('/frontend/assets/images/printmaking.jpg') }}" alt="Printmaking & Publications">
+						<div class="down-content">
+							<h4>Printmaking & Publications</h4>
+							<p>Explore our broad approach to contemporary printmaking and publications through prints, books, zines, multiples and installation.</p>
+						</div>
+					</div>
+
+					<div class="item">
+						<img src="{{ asset('/frontend/assets/images/photography.jpeg') }}" alt="Photography">
+						<div class="down-content">
+							<h4>Photography</h4>
+							<p>Approached as a fine-art medium within contemporary art practice, the Photography program emphasizes the development of your artistic vision.</p>
+						</div>
+					</div>
+
+					<div class="item">
+						<img src="{{ asset('/frontend/assets/images/drawingpaint.jpg') }}" alt="Drawing & Painting">
+						<div class="down-content">
+							<h4>Drawing & Painting</h4>
+							<p>Perceive, read and translate the visual world into personal forms of pictorial expression and representation.</p>
+						</div>
+					</div>
+
+					<div class="item">
+						<img src="{{ asset('/frontend/assets/images/intmedia.jpg') }}" alt="Integrated Media">
+						<div class="down-content">
+							<h4>Integrated Media</h4>
+							<p>Integrated Media is an innovative digital and time-based area that encourages an interdisciplinary exploration of media practices.</p>
+						</div>
+					</div>
+
+					<div class="item">
+						<img src="{{ asset('/frontend/assets/images/sculpt.jpg') }}" alt="Sculpture &Installation">
+						<div class="down-content">
+							<h4>Sculpture & Installation</h4>
+							<p>Sculpture & Installation students experiment with the making and transformation of three-dimensional objects in relation to other components, such as space, sound, text and images.</p>
+						</div>
+					</div>
+
+					<div class="item">
+						<img src="{{ asset('/frontend/assets/images/crosdisc.jpg') }}" alt="Cross-Disciplinary Art: Life Studies">
+						<div class="down-content">
+							<h4>Cross-Disciplinary Art: Life Studies</h4>
+							<p>Mapping all existing and potential studies of the figure and the body in contemporary art practices.</p>
+						</div>
+					</div>
+
+					<div class="item">
+						<img src="{{ asset('/frontend/assets/images/critic.jpg') }}" alt="Criticism & Curatorial Practice">
+						<div class="down-content">
+							<h4>Criticism & Curatorial Practice</h4>
+							<p>This cross-disciplinary area is the first undergraduate program in Canada designed to educate artists as curators and critics.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="section campus" data-section="section3">
-		<div class="campus-image">
-			<img src="{{ asset('/frontend/assets/images/campus.jpg') }}">
-		</div>
-
-		<div class="campus-overlay header-text">
-			<div class="caption">
-				<h2>“Creativity takes courage.”
-					<br>- Henri Matisse
-				</h2>
-				<p></p>
 			</div>
 		</div>
 	</section>

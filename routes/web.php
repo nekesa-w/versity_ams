@@ -25,6 +25,14 @@ Route::get('/versity/grad_admissions', function () {
     return view('versity.grad_admissions');
 })->name('grad_admissions');
 
-Route::get('/backend/admin', function () {
-    return view('backend.admin');
+Route::get('/versity/faculty_of_art', function () {
+    return view('versity.faculty_of_art');
+})->name('faculty_of_art');
+
+Route::get('/versity/faculty_of_design', function () {
+    return view('versity.faculty_of_design');
+})->name('faculty_of_design');
+
+Route::get('/admin', function () {
+    return view('admin.home');
 });
