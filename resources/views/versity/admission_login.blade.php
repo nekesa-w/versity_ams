@@ -16,7 +16,7 @@ https://templatemo.com/tm-557-grad-school
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Admissions Form </title>
+    <title> Admissions Login</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('/frontend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -103,7 +103,7 @@ https://templatemo.com/tm-557-grad-school
             <div class="row">
                 <div class="col-md-12">
                     <div class="course-heading">
-                        <h2>Choose Your Course</h2>
+                        <h2>Browse Courses</h2>
                     </div>
                 </div>
                 <div class="owl-carousel owl-theme">
@@ -231,23 +231,10 @@ https://templatemo.com/tm-557-grad-school
                 <p>Please fill in the form carefully and make sure all information is accurate</p>
             </div>
 
-            <form action="post">
-                <label for="fname">First name</label>
-                <input id="fname" name="fname" type="text" required /><br>
-
-                <label for="lname">Last name</label>
-                <input id="lname" name="lname" type="text" required /><br>
-
-                <label for="dob">Date of birth</label>
-                <input id="dob" name="dob" type="date" required /><br>
-
-                <div class="gender">
-                    <label for="gender">Gender</label>
-                    <input type="radio" value="none" id="male" name="gender" />
-                    <label for="male" class="radio">Male</label>
-                    <input type="radio" value="none" id="female" name="gender" />
-                    <label for="female" class="radio">Female</label>
-                </div>
+            <form action="application" method="POST">
+                @csrf
+                <label for="fullname">Full Name</label>
+                <input id="fullname" name="fullname" type="text" required /><br>
 
                 <label for="phone">Phone Number</label>
                 <input id="phone" name="phone" type="number" required /><br>
@@ -255,11 +242,8 @@ https://templatemo.com/tm-557-grad-school
                 <label for="email">Email</label>
                 <input id="email" name="email" type="email" required /><br>
 
-                <label for="country">Country</label>
-                <input id="country" name="country" type="text" required /><br>
-
-                <label for="address">Street Address</label>
-                <input id="address" name="address" type="text" required /><br>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required /><br>
 
                 <input type="submit" value="Create Account">
             </form>
