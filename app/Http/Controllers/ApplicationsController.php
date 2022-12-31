@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Applications;
 use App\Http\Requests\StoreApplicationsRequest;
 use App\Http\Requests\UpdateApplicationsRequest;
+use Illuminate\Http\Request;
 
 class ApplicationsController extends Controller
 {
@@ -82,5 +83,24 @@ class ApplicationsController extends Controller
     public function destroy(Applications $applications)
     {
         //
+    }
+
+    function getData(Request $request)
+    {
+        $fullname = $request->input('fullname');
+        $phone =  $request->input('phone');
+        $email = $request->input('email');
+        $password = $request->input('password');
+
+        $isInsertSuccess = Applications::insert([
+            'fullname' => $fullname,
+            'phone' => $phone,
+            'email' => $email,
+            'password' => $password,
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now(),
+        ]);
+        if ($isInsertSuccess) echo 'Insert Success';
+        else echo 'Insert Failed';
     }
 }

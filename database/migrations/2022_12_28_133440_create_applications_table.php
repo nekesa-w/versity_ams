@@ -14,9 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('applications', function (Blueprint $table) {
-            $table->integer('email');
+            $table->string('fullname');
+            $table->integer('phone');
+            $table->string('email');
             $table->string('password');
-            $table->string('role')->default('course');
+            $table->string('role')->default('application');
             $table->timestamps();
         });
     }

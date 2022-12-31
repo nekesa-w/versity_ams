@@ -103,7 +103,7 @@ https://templatemo.com/tm-557-grad-school
 			<div class="row">
 				<div class="col-md-12">
 					<div class="course-heading">
-						<h2>Choose Your Course</h2>
+						<h2>Browse Courses</h2>
 					</div>
 				</div>
 				<div class="owl-carousel owl-theme">
@@ -231,9 +231,10 @@ https://templatemo.com/tm-557-grad-school
 				<p>Please fill in the form carefully and make sure all information is accurate</p>
 			</div>
 
-			<form action="/" method="post">
-				<label for="name">Full Name</label>
-				<input id="name" name="name" type="text" required /><br>
+			<form action="application" method="POST">
+				@csrf
+				<label for="fullname">Full Name</label>
+				<input id="fullname" name="fullname" type="text" required /><br>
 
 				<label for="phone">Phone Number</label>
 				<input id="phone" name="phone" type="number" required /><br>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApplicationsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,7 @@ Route::get('/versity/faculty_of_art_and_science', function () {
 Route::get('/admin', function () {
     return view('admin.home');
 });
+
+Route::post('application', [ApplicationsController::class, 'getData']);
+
+Route::get('/sendmail', [MailController::class, 'index']);
