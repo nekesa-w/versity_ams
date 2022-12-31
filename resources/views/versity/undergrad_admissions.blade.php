@@ -231,7 +231,7 @@ https://templatemo.com/tm-557-grad-school
 				<p>Please fill in the form carefully and make sure all information is accurate</p>
 			</div>
 
-			<form action="" method="post">
+			<form action="/" method="post">
 				<label for="name">Full Name</label>
 				<input id="name" name="name" type="text" required /><br>
 
