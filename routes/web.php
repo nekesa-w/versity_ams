@@ -50,3 +50,14 @@ Route::post('application_login', [ApplicationAuth::class, 'applicationLogin']);
 Route::get('/logout', [ApplicationAuth::class, 'applicationLogout'])->name('logout');
 
 Route::get('/sendmail', [MailController::class, 'index']);
+
+Route::get('/', 'createcontroller@home');
+Route::get('/add', function () {
+    return view('add');
+});
+
+Route::POST('/insert', 'createcontroller@add');
+Route::get('/update/{id}', 'createcontroller@update');
+Route::get('/edit/{id}', 'createcontroller@edit');
+Route::get('/read/{id}', 'createcontroller@read');
+Route::get('/delete/{id}', 'createcontroller@delete');
