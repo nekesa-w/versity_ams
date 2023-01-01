@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('phone');
             $table->string('email');
             $table->string('password');
-            $table->string('role')->default('application');
+            $table->string('role')->default('applicant');
             $table->timestamps();
         });
     }

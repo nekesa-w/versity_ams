@@ -30,8 +30,25 @@ https://templatemo.com/tm-557-grad-school
 </head>
 
 <body>
-    <section class="section login">
 
+    <section class="section application">
+        <div class="container-app">
+            <div class="heading-app">
+                <h2>Login for Undergraduate Admission</h2>
+                <p>Please fill in the form carefully and make sure all information is accurate</p>
+            </div>
+
+            <form action="application_login" method="POST">
+                @csrf
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required /><br>
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required /><br>
+
+                <input type="submit" value="Login">
+            </form>
+        </div>
     </section>
 
     <section class="section about" data-section="section5">
@@ -65,7 +82,7 @@ https://templatemo.com/tm-557-grad-school
                     <nav>
                         <ul class="footer-links nav flex-column">
                             <li class="nav-item">
-                                <a href="{{ route('undergrad_admissions') }}" title="Admissions">Undergraduate Admissions</a>
+                                <a href="{{ route('application_reg') }}" title="Admissions">Undergraduate Admissions</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('faculty_of_art') }}" title="Faculty of Art">Faculty of Art</a>

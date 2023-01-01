@@ -41,7 +41,7 @@ https://templatemo.com/tm-557-grad-school
         <nav id="menu" class="main-nav" role="navigation">
             <ul class="main-menu">
 
-                <li><a href="{{ route('undergrad_admissions') }}">Future Students</a></li>
+                <li><a href="{{ route('application_reg') }}">Future Students</a></li>
 
                 <li class="has-submenu"><a href="">Current Students </a>
                     <ul class="sub-menu">
@@ -175,7 +175,7 @@ https://templatemo.com/tm-557-grad-school
                     <nav>
                         <ul class="footer-links nav flex-column">
                             <li class="nav-item">
-                                <a href="{{ route('undergrad_admissions') }}" title="Admissions">Undergraduate Admissions</a>
+                                <a href="{{ route('application_reg') }}" title="Admissions">Undergraduate Admissions</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('faculty_of_art') }}" title="Faculty of Art">Faculty of Art</a>

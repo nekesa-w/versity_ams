@@ -1433,22 +1433,3 @@ https://templatemo.com/tm-557-grad-school
     border-radius: 4px;
     cursor: pointer;
   }
-
-  .admission-process {
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-  }
-
-  .admission-process li {
-    float: left;
-    margin-left: 100px;
-  }
-
-  .admission-process p {
-    display: block;
-    text-align: left;
-    width: 100px;
-  }

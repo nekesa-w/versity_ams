@@ -16,7 +16,7 @@ https://templatemo.com/tm-557-grad-school
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title> Faculty of Art </title>
+	<title> Admissions Registration </title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="{{asset('/frontend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -30,7 +30,6 @@ https://templatemo.com/tm-557-grad-school
 </head>
 
 <body>
-
 	<header class="main-header clearfix" role="header">
 		<div class="logo">
 			<a href="{{ route('home') }}"><em>Ver</em>sity</a>
@@ -43,120 +42,38 @@ https://templatemo.com/tm-557-grad-school
 
 				<li><a href="{{ route('application_reg') }}">Future Students</a></li>
 
-				<li class="has-submenu"><a href="">Current Students </a>
-					<ul class="sub-menu">
-						<li><a href="#section2">AMS Login</a></li>
-						<li><a href="#section3">E-Learning Login</a></li>
-					</ul>
-				</li>
-
-				<li class="has-submenu"><a href="">Staff </a>
-					<ul class="sub-menu">
-						<li><a href="#section2">Vacancies</a></li>
-						<li><a href="#section3">Staff Login</a></li>
-					</ul>
-				</li>
-
-				<li class="has-submenu"><a href="">Faculty</a>
-					<ul class="sub-menu">
-						<li><a href="{{ route('faculty_of_art') }}">Faculty of Art</a></li>
-						<li><a href="{{ route('faculty_of_design') }}">Faculty of Design</a></li>
-					</ul>
-				</li>
-
 				<li><a href="">About</a></li>
 			</ul>
 		</nav>
 
 	</header>
 
-	<section class="section main-banner" id="top" data-section="section1">
-		<div class="bg-image">
-			<img src="{{ asset('/frontend/assets/images/facultyart.jpg') }}">
-		</div>
+	<section class="section application">
 
-		<div class="image-overlay header-text">
-			<div class="caption">
-				<h2>Faculty of Art</h2>
-				<p>Educating artists and cultural practitioners who will shape the age of imagination and redefine the meaning of contemporary art practice.</p>
+		<div class="container-app">
+			<div class="heading-app">
+				<h2>Register for Undergraduate Admission</h2>
+				<p>Please fill in the form carefully and make sure all information is accurate</p>
 			</div>
-		</div>
-	</section>
 
-	<section class="section courses" data-section="section4">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="course-heading">
-						<h2>Choose Your Course</h2>
-					</div>
-				</div>
-				<div class="owl-carousel owl-theme">
-					<div class="item">
-						<img src="{{ asset('/frontend/assets/images/expanimation.jpg') }}" alt="Experimental Animation">
-						<div class="down-content">
-							<h4>Experimental Animation</h4>
-							<p>Learn the skills to bring your imagination to life in the new Experimental Animation program.</p>
-						</div>
-					</div>
+			<form action="application_reg" method="POST">
+				@csrf
+				<label for="fullname">Full Name</label>
+				<input id="fullname" name="fullname" type="text" required /><br>
 
-					<div class="item">
-						<img src="{{ asset('/frontend/assets/images/printmaking.jpg') }}" alt="Printmaking & Publications">
-						<div class="down-content">
-							<h4>Printmaking & Publications</h4>
-							<p>Explore our broad approach to contemporary printmaking and publications through prints, books, zines, multiples and installation.</p>
-						</div>
-					</div>
+				<label for="phone">Phone Number</label>
+				<input id="phone" name="phone" type="number" required /><br>
 
-					<div class="item">
-						<img src="{{ asset('/frontend/assets/images/photography.jpeg') }}" alt="Photography">
-						<div class="down-content">
-							<h4>Photography</h4>
-							<p>Approached as a fine-art medium within contemporary art practice, the Photography program emphasizes the development of your artistic vision.</p>
-						</div>
-					</div>
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email" required /><br>
 
-					<div class="item">
-						<img src="{{ asset('/frontend/assets/images/drawingpaint.jpg') }}" alt="Drawing & Painting">
-						<div class="down-content">
-							<h4>Drawing & Painting</h4>
-							<p>Perceive, read and translate the visual world into personal forms of pictorial expression and representation.</p>
-						</div>
-					</div>
+				<label for="password">Password</label>
+				<input id="password" name="password" type="password" required /><br>
 
-					<div class="item">
-						<img src="{{ asset('/frontend/assets/images/intmedia.jpg') }}" alt="Integrated Media">
-						<div class="down-content">
-							<h4>Integrated Media</h4>
-							<p>Integrated Media is an innovative digital and time-based area that encourages an interdisciplinary exploration of media practices.</p>
-						</div>
-					</div>
+				<input type="submit" value="Create Account"><br>
 
-					<div class="item">
-						<img src="{{ asset('/frontend/assets/images/sculpt.jpg') }}" alt="Sculpture &Installation">
-						<div class="down-content">
-							<h4>Sculpture & Installation</h4>
-							<p>Sculpture & Installation students experiment with the making and transformation of three-dimensional objects in relation to other components, such as space, sound, text and images.</p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img src="{{ asset('/frontend/assets/images/crosdisc.jpg') }}" alt="Cross-Disciplinary Art: Life Studies">
-						<div class="down-content">
-							<h4>Cross-Disciplinary Art: Life Studies</h4>
-							<p>Mapping all existing and potential studies of the figure and the body in contemporary art practices.</p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img src="{{ asset('/frontend/assets/images/critic.jpg') }}" alt="Criticism & Curatorial Practice">
-						<div class="down-content">
-							<h4>Criticism & Curatorial Practice</h4>
-							<p>This cross-disciplinary area is the first undergraduate program in Canada designed to educate artists as curators and critics.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+				<a href="{{ route('application_login') }}"> Already have an Account? Log In </a>
+			</form>
 		</div>
 	</section>
 

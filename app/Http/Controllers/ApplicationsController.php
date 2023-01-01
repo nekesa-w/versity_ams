@@ -100,7 +100,7 @@ class ApplicationsController extends Controller
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
-        if ($isInsertSuccess) echo 'Insert Success';
+        if ($isInsertSuccess) return {{ route('application_login') }};
         else echo 'Insert Failed';
     }
 }

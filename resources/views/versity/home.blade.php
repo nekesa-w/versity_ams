@@ -41,7 +41,7 @@ https://templatemo.com/tm-557-grad-school
 		<nav id="menu" class="main-nav" role="navigation">
 			<ul class="main-menu">
 
-				<li><a href="{{ route('undergrad_admissions') }}">Future Students</a></li>
+				<li><a href="{{ route('application_reg') }}">Future Students</a></li>
 
 				<li class="has-submenu"><a href="">Current Students </a>
 					<ul class="sub-menu">
@@ -79,7 +79,7 @@ https://templatemo.com/tm-557-grad-school
 			<div class="caption">
 				<h2>Versity School <br> of Art & Design</h2>
 				<div class="main-button">
-					<a href="{{ route('undergrad_admissions') }}">
+					<a href="{{ route('application_reg') }}">
 						<h6>Apply <em>Today</em></h6>
 					</a>
 				</div>
@@ -99,7 +99,7 @@ https://templatemo.com/tm-557-grad-school
 							<div class="content-hide">
 								<p> With so many programs to choose from, it can be overwhelming to find a program that best suits you. Explore our undergraduate majors and get ready to reach your full potential.
 								<p>
-								<div class="scroll-to-section"><a href="{{ route('undergrad_admissions') }}">More Info.</a></div>
+								<div class="scroll-to-section"><a href="{{ route('application_reg') }}">More Info.</a></div>
 							</div>
 						</div>
 					</div>
@@ -243,7 +243,7 @@ https://templatemo.com/tm-557-grad-school
 					<nav>
 						<ul class="footer-links nav flex-column">
 							<li class="nav-item">
-								<a href="{{ route('undergrad_admissions') }}" title="Admissions">Undergraduate Admissions</a>
+								<a href="{{ route('application_reg') }}" title="Admissions">Undergraduate Admissions</a>
 							</li>
 							<li class="nav-item">
 								<a href="{{ route('faculty_of_art') }}" title="Faculty of Art">Faculty of Art</a>
