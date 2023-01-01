@@ -6,6 +6,8 @@ use App\Models\Applications;
 use App\Http\Requests\StoreApplicationsRequest;
 use App\Http\Requests\UpdateApplicationsRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class ApplicationsController extends Controller
 {
@@ -96,11 +98,11 @@ class ApplicationsController extends Controller
             'fullname' => $fullname,
             'phone' => $phone,
             'email' => $email,
-            'password' => $password,
+            'password' => Hash::make($password),
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
-        if ($isInsertSuccess) return {{ route('application_login') }};
-        else echo 'Insert Failed';
+        if ($isInsertSuccess) return redirect()->route('application_login')->withSuccess('Registration was successful');
+        else return Redirect::back()->withErrors(['error' => 'Registration was not successful']);
     }
 }

@@ -39,8 +39,14 @@ Route::get('/application_login', function () {
     return view('application.application_login');
 })->name('application_login');
 
+Route::get('/application_form', function () {
+    return view('application.application_form');
+})->name('application_form');
+
 Route::post('application_reg', [ApplicationsController::class, 'getData']);
 
 Route::post('application_login', [ApplicationAuth::class, 'applicationLogin']);
+
+Route::get('/logout', [ApplicationAuth::class, 'applicationLogout'])->name('logout');
 
 Route::get('/sendmail', [MailController::class, 'index']);

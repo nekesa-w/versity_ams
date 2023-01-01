@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('applications', function (Blueprint $table) {
             $table->string('fullname');
             $table->integer('phone');
-            $table->string('email');
+            $table->string('email')->unique();;
             $table->string('password');
             $table->string('role')->default('applicant');
             $table->timestamps();

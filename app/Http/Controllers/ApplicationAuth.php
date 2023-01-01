@@ -3,11 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Applications;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class ApplicationAuth extends Controller
 {
     function applicationLogin(Request $request)
     {
-        return $request->input();
+        $user = Applications::where(['email' => $request->email])->first();
+        if ($user) {
+            if (Hash::check($request->password, $user->password)) {
+                $request->session()->put('loginId', $user->email);
+                return redirect()->route('application_form')->withSuccess('Login was successful');
+            } else return Redirect::back()->withErrors(['msg' => 'Wrong password']);
+        } else return Redirect::back()->withErrors(['msg' => 'Wrong email']);
+    }
+
+    function applicationLogout()
+    {
+        if (Session::has('loginId')) {
+            Session::pull('loginId');
+        } else return redirect()->route('application_login')->withSuccess('Logout was successful');
     }
 }

@@ -16,7 +16,7 @@ https://templatemo.com/tm-557-grad-school
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title> Admissions Registration </title>
+	<title> Registration </title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="{{asset('/frontend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -39,10 +39,12 @@ https://templatemo.com/tm-557-grad-school
 
 		<nav id="menu" class="main-nav" role="navigation">
 			<ul class="main-menu">
-
-				<li><a href="{{ route('application_reg') }}">Future Students</a></li>
-
-				<li><a href="">About</a></li>
+				@if(Session::has('loginId'))
+				<li><a href="{{ route('application_form') }}">Application Form</a></li>
+				<li><a href="{{ route('logout') }}">Logout</a></li>
+				@else
+				<li><a href="{{ route('application_login') }}">Login</a></li>
+				@endif
 			</ul>
 		</nav>
 
@@ -52,7 +54,7 @@ https://templatemo.com/tm-557-grad-school
 
 		<div class="container-app">
 			<div class="heading-app">
-				<h2>Register for Undergraduate Admission</h2>
+				<h2>Register for an Undergraduate Application account</h2>
 				<p>Please fill in the form carefully and make sure all information is accurate</p>
 			</div>
 
@@ -62,7 +64,7 @@ https://templatemo.com/tm-557-grad-school
 				<input id="fullname" name="fullname" type="text" required /><br>
 
 				<label for="phone">Phone Number</label>
-				<input id="phone" name="phone" type="number" required /><br>
+				<input id="phone" name="phone" type="number" onKeyPress="if(this.value.length==10) return false;" required /><br>
 
 				<label for="email">Email</label>
 				<input id="email" name="email" type="email" required /><br>
@@ -72,7 +74,7 @@ https://templatemo.com/tm-557-grad-school
 
 				<input type="submit" value="Create Account"><br>
 
-				<a href="{{ route('application_login') }}"> Already have an Account? Log In </a>
+				<a href="{{ route('application_login') }}"> Already have an account? Login here</a>
 			</form>
 		</div>
 	</section>

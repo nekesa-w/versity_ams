@@ -1433,3 +1433,11 @@ https://templatemo.com/tm-557-grad-school
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .container-app h3 {
+    text-align: center;
+    padding: 10px 0;
+    color: #000;
+    background-color: #ac678e;
+    font-size: 15px;
+  }

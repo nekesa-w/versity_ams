@@ -16,7 +16,7 @@ https://templatemo.com/tm-557-grad-school
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Login</title>
+    <title> About </title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('/frontend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -30,6 +30,7 @@ https://templatemo.com/tm-557-grad-school
 </head>
 
 <body>
+
     <header class="main-header clearfix" role="header">
         <div class="logo">
             <a href="{{ route('home') }}"><em>Ver</em>sity</a>
@@ -39,46 +40,50 @@ https://templatemo.com/tm-557-grad-school
 
         <nav id="menu" class="main-nav" role="navigation">
             <ul class="main-menu">
-                @if(Session::has('loginId'))
-                <li><a href="{{ route('application_form') }}">Application Form</a></li>
-                <li><a href="{{ route('logout') }}">Logout</a></li>
-                @else
-                <li><a href="{{ route('application_login') }}">Login</a></li>
-                @endif
+
+                <li><a href="{{ route('application_reg') }}">Future Students</a></li>
+
+                <li class="has-submenu"><a href="">Current Students </a>
+                    <ul class="sub-menu">
+                        <li><a href="#section2">AMS Login</a></li>
+                        <li><a href="#section3">E-Learning Login</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu"><a href="">Staff </a>
+                    <ul class="sub-menu">
+                        <li><a href="#section2">Vacancies</a></li>
+                        <li><a href="#section3">Staff Login</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu"><a href="">Faculty</a>
+                    <ul class="sub-menu">
+                        <li><a href="{{ route('faculty_of_art') }}">Faculty of Art</a></li>
+                        <li><a href="{{ route('faculty_of_design') }}">Faculty of Design</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="">About</a></li>
             </ul>
         </nav>
 
     </header>
 
-    <section class="section application">
-        <div class="container-app">
-            @if($errors->any())
-            <h3>{{$errors->first()}}</h3>
-            @endif
+    <section class="section main-banner" id="top" data-section="section1">
+        <div class="bg-image">
+            <img src="{{ asset('/frontend/assets/images/facultyart.jpg') }}">
+        </div>
 
-
-            @if(session('success'))
-            <h3>{{session('success')}}</h3>
-            @endif
-
-            <div class="heading-app">
-                <h2>Login for Undergraduate Admission</h2>
-                <p>Please fill in the form carefully and make sure all information is accurate</p>
+        <div class="image-overlay header-text">
+            <div class="caption">
+                <h2>Faculty of Art</h2>
+                <p>Educating artists and cultural practitioners who will shape the age of imagination and redefine the meaning of contemporary art practice.</p>
             </div>
-
-            <form action="application_login" method="POST">
-                @csrf
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required /><br>
-
-                <label for="password">Password</label>
-                <input id="password" name="password" type="password" required /><br>
-
-                <input type="submit" value="Login"><br>
-                <a href="{{ route('application_reg') }}"> Do not have an account? Register here </a>
-            </form>
         </div>
     </section>
+
+    <div id="googleMap" style="width:100%;height:400px;"></div>
 
     <section class="section about" data-section="section5">
         <div class="container">
@@ -175,6 +180,18 @@ https://templatemo.com/tm-557-grad-school
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
+
+
+    <script>
+        function myMap() {
+            var mapProp = {
+                center: new google.maps.LatLng(51.508742, -0.120850),
+                zoom: 5,
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        }
+    </script>
+
     <script src="{{ asset('/frontend/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
@@ -189,3 +206,8 @@ https://templatemo.com/tm-557-grad-school
 </body>
 
 </html>
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
