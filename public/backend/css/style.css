@@ -36,14 +36,14 @@
 
 	.btn {
 		background: #8a3c68;
-		color: white;
+		color: #fff;
 		padding: 5px 10px;
 		text-align: center;
 	}
 
 	.btn:hover {
 		color: #8a3c68;
-		background: white;
+		background: #fff;
 		padding: 3px 8px;
 		border: 2px solid #8a3c68;
 	}
@@ -57,16 +57,23 @@
 	}
 
 	table {
-		padding: 10px;
-		margin-left: auto;
-		margin-right: auto;
+		text-align: center;
+		border-collapse: collapse;
 	}
 
 	th,
 	td {
-		text-align: left;
-		padding: 8px;
+		padding: 20px;
 	}
+
+	table tr {
+		border-bottom: 2px solid #999;
+	}
+
+	table tr:last-child {
+		border-bottom: none;
+	}
+
 
 	.side-menu {
 		position: fixed;
@@ -129,7 +136,7 @@
 		right: 0;
 		width: 80vw;
 		height: 15vh;
-		background: white;
+		background: #fff;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 		z-index: 1;
 		display: flex;
@@ -147,13 +154,12 @@
 
 	.container .content {
 		position: relative;
-		margin-top: 20vh;
+		padding: 20vh 0;
 		min-height: 90vh;
-		background: #f1f1f1;
+		background-color: #f1f1f1;
 	}
 
 	.container .content .cards {
-		margin-top: 20vh;
 		padding: 20px 15px;
 		display: flex;
 		align-items: center;
@@ -164,7 +170,7 @@
 	.container .content .cards .card {
 		width: 250px;
 		height: 150px;
-		background: white;
+		background: #fff;
 		margin: 20px 10px;
 		display: flex;
 		align-items: center;
@@ -172,8 +178,10 @@
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	}
 
-	.container .content .content-table,
-	.container .content .forms {
+
+
+	/** crud pages**/
+	.container .content .content-table {
 		min-height: 60vh;
 		display: flex;
 		justify-content: space-around;
@@ -181,18 +189,62 @@
 		flex-wrap: wrap;
 	}
 
-	.container .content .content-table .admin-table,
-	.container .content form {
+	.container .content .content-table a {
+		background-color: #8a3c68;
+		color: #fff;
+		padding: 15px;
+		border-radius: 4px;
+	}
+
+	.container .content .forms {
+		min-height: 60vh;
+		display: block;
+	}
+
+	.container .content .content-table .admin-table {
 		min-height: 50vh;
 		flex: 5;
-		background: white;
+		background: #fff;
 		margin: 0 25px 25px 25px;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		display: flex;
 		flex-direction: column;
+		padding: 20px;
 	}
 
-	.container .content .content-table .admin-table a {
+	.container .content form {
+		min-height: 50vh;
+		flex: 5;
+		background: #fff;
+		margin: 0 25px 25px 25px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		text-align: center;
+	}
+
+	.container .content form label {
+		margin-top: 30px;
+	}
+
+	.container .content form input,
+	.container .content form select {
+		padding: 10px 20px;
+		margin: 10px 50px;
+	}
+
+	.container .content form input[type=submit] {
+		background-color: #8a3c68;
+		color: #FFF;
+		padding: 14px 20px;
+		margin: 10px 250px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	.container .content a {
 		text-align: center;
 		width: 30%;
 		margin-left: auto;
@@ -200,44 +252,14 @@
 		margin-top: 10px;
 	}
 
-	.container .content form {
-		padding: 20px;
-		text-align: center;
-		display: inline;
-	}
-
-	.container .content form label {
-		margin-top: 30px;
-	}
-
-	.container .content form input {
-		padding: 10px 30px;
-		margin: 10px 50px;
-	}
-
-	.container .content form input[type=submit] {
-		width: 30%;
-		background-color: #8a3c68;
-		color: #FFF;
-		padding: 14px 20px;
-		margin: 8px 0;
-		border: none;
-		border-radius: 4px;
-		cursor: pointer;
-	}
-
-	.container .content .content-table a {
-		background-color: #8a3c68;
-		color: #fff;
-		padding: 15px;
-	}
-
 	.content h4 {
 		text-align: center;
-		padding: 10px 0;
-		color: #000;
-		background-color: #ac678e;
+		padding: 15px 0;
+		color: #fff;
+		background-color: #945d7c;
 		font-size: 15px;
+		margin: 0 50px;
+		margin-bottom: 10px;
 	}
 
 
@@ -264,7 +286,7 @@
 		.side-menu li:hover {
 			background: #8a3c68;
 			padding: 8px 38px;
-			border: 2px solid white;
+			border: 2px solid #fff;
 		}
 	}
 

@@ -51,46 +51,16 @@
             @if(session('success'))
             <h4>{{session('success')}}</h4>
             @endif
-
-            <div class="content-table">
-                <div class="admin-table">
-                    <div class="title">
-                        <h2>View Courses</h2>
-                    </div>
-
-                    <a href="#create">Add New Course</a>
-
-                    <table>
-                        <tr>
-                            <th>Course Id</th>
-                            <th>Course Name</th>
-                            <th>Faculty Id</th>
-                            <th>Faculty Name</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                        </tr>
-
-                        @foreach($data as $item)
-                        <tr>
-                            <td> {{$item->course_id}}</td>
-                            <td> {{$item->course_name}}</td>
-                            <td> {{$item->faculty_id}}</td>
-                            <td> {{$item->getFaculties->faculty_name}}</td>
-                            <td><a href="edit/{{$item->course_id}}">Edit</a></td>
-                            <td><a href="delete/{{$item->course_id}}">Delete</a></td>
-                        </tr>
-                        @endforeach
-                    </table>
-                </div>
-            </div>
+            <br>
 
             <div class="forms">
 
-                <a id="create"></a>
-                <form action="course_create" method="POST">
+                <a id="edit"></a>
+                <form action="{{ route('course_update')}}" method="POST">
                     @csrf
+                    <input type="hidden" name="cid" value="{{$Info->course_id}}">
                     <div class="title">
-                        <h2>Add Course</h2>
+                        <h2>Edit Course</h2>
                     </div>
 
                     <label for="name">Course Name</label>
@@ -103,7 +73,7 @@
                         @endforeach
                     </select>
 
-                    <input type="submit" value="Add"><br>
+                    <input type="submit" value="Edit"><br>
                 </form>
             </div>
         </div>

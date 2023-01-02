@@ -5,82 +5,58 @@ namespace App\Http\Controllers;
 use App\Models\Courses;
 use App\Http\Requests\StoreCoursesRequest;
 use App\Http\Requests\UpdateCoursesRequest;
+use App\Models\Faculty;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
 
 class CoursesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    function add(Request $request)
     {
-        //
+
+        $isInsertSuccess = Courses::insert([
+            'course_name' => $request->input('name'),
+            'faculty_id' => $request->input('faculty'),
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now(),
+        ]);
+        if ($isInsertSuccess) return redirect()->route('admin_course')->withSuccess('Course was added');
+        else return Redirect::back()->withErrors(['error' => 'Course was not added']);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    function delete($course_id)
     {
-        //
+        $delete = DB::table('courses')
+            ->where('course_id', $course_id)
+            ->delete();
+        return redirect()->route('admin_course')->withSuccess('Course was deleted');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreCoursesRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreCoursesRequest $request)
+    function edit($course_id)
     {
-        //
+        $row = DB::table('courses')
+            ->where('course_id', $course_id)
+            ->first();
+
+        $data = [
+            'Info' => $row,
+        ];
+
+        return view('admin.admin_courseedit', $data);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Courses  $courses
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Courses $courses)
+    function update(Request $request)
     {
-        //
-    }
+        $updating = DB::table('faculties')
+            ->where('course_id', $request->input('cid'))
+            ->update([
+                'course_name' => $request->input('name')
+            ]);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Courses  $courses
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Courses $courses)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateCoursesRequest  $request
-     * @param  \App\Models\Courses  $courses
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateCoursesRequest $request, Courses $courses)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Courses  $courses
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Courses $courses)
-    {
-        //
+        if ($updating) return redirect()->route('admin_course')->withSuccess('course was edited');
+        else return Redirect::back()->withErrors(['error' => 'course was not edited']);
     }
 }

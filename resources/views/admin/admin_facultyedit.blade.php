@@ -51,48 +51,22 @@
             @if(session('success'))
             <h4>{{session('success')}}</h4>
             @endif
-
-            <div class="content-table">
-                <div class="admin-table">
-                    <div class="title">
-                        <h2>View Faculties</h2>
-                    </div>
-
-                    <a href="#create">Add New Faculty</a>
-
-                    <table>
-                        <tr>
-                            <th>Faculty Id</th>
-                            <th>Faculty Name</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                        </tr>
-
-                        @foreach($data as $item)
-                        <tr>
-                            <td> {{$item->faculty_id}}</td>
-                            <td> {{$item->faculty_name}}</td>
-                            <td><a href="edit/{{$item->faculty_id}}">Edit</a></td>
-                            <td><a href="delete/{{$item->faculty_id}}">Delete</a></td>
-                        </tr>
-                        @endforeach
-                    </table>
-                </div>
-            </div>
+            <br>
 
             <div class="forms">
 
-                <a id="create"></a>
-                <form action="faculty_create" method="POST">
+                <a id="edit"></a>
+                <form action="{{ route('faculty_update')}}" method="POST">
                     @csrf
+                    <input type="hidden" name="cid" value="{{$Info->faculty_id}}">
                     <div class="title">
-                        <h2>Add Faculty</h2>
+                        <h2>Edit Faculty</h2>
                     </div>
 
                     <label for="name">Faculty Name</label>
-                    <input id="name" name="name" type="text" required /><br>
+                    <input id="name" name="name" type="text" value="{{$Info->faculty_name}}" required /><br>
 
-                    <input type="submit" value="Add"><br>
+                    <input type="submit" value="Edit"><br>
                 </form>
             </div>
         </div>

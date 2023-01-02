@@ -33,7 +33,7 @@
 			<div class="nav">
 				<div class="user">
 					<ul>
-						@if(Session::has('loginId'))
+						@if(Session::has('adminId'))
 						<li><a href="{{ route('admin_logout') }}">Logout</a></li>
 						@else
 						<li><a href="{{ route('admin_login') }}">Login</a></li>
@@ -48,7 +48,7 @@
 			<div class="cards">
 				<div class="card">
 					<div class="box">
-						<h1>2194</h1>
+						<h1>{{ $faculties }}</h1>
 						<h3>Faculties</h3>
 					</div>
 					<div class="icon-case">
@@ -59,7 +59,7 @@
 
 				<div class="card">
 					<div class="box">
-						<h1>53</h1>
+						<h1>{{ $courses }}</h1>
 						<h3>Courses</h3>
 					</div>
 					<div class="icon-case">
@@ -70,7 +70,7 @@
 
 				<div class="card">
 					<div class="box">
-						<h1>5</h1>
+						<h1>{{ $students }}</h1>
 						<h3>Students</h3>
 					</div>
 					<div class="icon-case">
@@ -81,7 +81,7 @@
 
 				<div class="card">
 					<div class="box">
-						<h1>350000</h1>
+						<h1>{{ $lecturers }}</h1>
 						<h3>Lecturers</h3>
 					</div>
 					<div class="icon-case">
@@ -92,7 +92,7 @@
 
 				<div class="card">
 					<div class="box">
-						<h1>350000</h1>
+						<h1>{{ $staff }}</h1>
 						<h3>Staff</h3>
 					</div>
 					<div class="icon-case">

@@ -39,7 +39,7 @@ https://templatemo.com/tm-557-grad-school
 
         <nav id="menu" class="main-nav" role="navigation">
             <ul class="main-menu">
-                @if(Session::has('loginId'))
+                @if(Session::has('adminId'))
                 <li><a href="{{ route('admin_logout') }}">Logout</a></li>
                 @else
                 <li><a href="{{ route('admin_login') }}">Login</a></li>
