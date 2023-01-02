@@ -44,14 +44,13 @@
 
         <div class="content">
             @if($errors->any())
-            <h4>{{$errors->first()}}</h4>
+            <h4 class="errors">{{$errors->first()}}</h4>
             @endif
 
 
             @if(session('success'))
-            <h4>{{session('success')}}</h4>
+            <h4 class="success">{{session('success')}}</h4>
             @endif
-            <br>
 
             <div class="forms">
 

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Courses;
+use App\Models\Faculty;
 use App\Http\Requests\StoreCoursesRequest;
 use App\Http\Requests\UpdateCoursesRequest;
-use App\Models\Faculty;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
@@ -27,7 +27,7 @@ class CoursesController extends Controller
         else return Redirect::back()->withErrors(['error' => 'Course was not added']);
     }
 
-    function delete($course_id)
+    function course_delete($course_id)
     {
         $delete = DB::table('courses')
             ->where('course_id', $course_id)
@@ -35,7 +35,7 @@ class CoursesController extends Controller
         return redirect()->route('admin_course')->withSuccess('Course was deleted');
     }
 
-    function edit($course_id)
+    function course_edit($course_id)
     {
         $row = DB::table('courses')
             ->where('course_id', $course_id)
@@ -45,15 +45,18 @@ class CoursesController extends Controller
             'Info' => $row,
         ];
 
-        return view('admin.admin_courseedit', $data);
+        $faculty = Faculty::with('getCourses')->get();
+
+        return view('admin.admin_courseedit', $data, compact('faculty'));
     }
 
-    function update(Request $request)
+    function course_update(Request $request)
     {
-        $updating = DB::table('faculties')
+        $updating = DB::table('courses')
             ->where('course_id', $request->input('cid'))
             ->update([
-                'course_name' => $request->input('name')
+                'course_name' => $request->input('name'),
+                'faculty_id' => $request->input('faculty')
             ]);
 
         if ($updating) return redirect()->route('admin_course')->withSuccess('course was edited');

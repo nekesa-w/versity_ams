@@ -51,29 +51,71 @@ https://templatemo.com/tm-557-grad-school
     </header>
 
     <section class="section application">
-
         <div class="container-app">
+            @if($errors->any())
+            <h3 class="errors">{{$errors->first()}}</h3>
+            @endif
+
+
+            @if(session('success'))
+            <h3 class="success">{{session('success')}}</h3>
+            @endif
+
             <div class="heading-app">
                 <h2>Application Form</h2>
-                <p>Please fill in the form carefully and make sure all information is accurate</p>
+                <p>Please fill in the form carefully and make sure all information is accurate.</p>
             </div>
 
-            <form action="application_reg" method="POST">
+            <form action="upload_form" method="POST" enctype="multipart/form-data">
                 @csrf
-                <label for="fullname">Full Name</label>
-                <input id="fullname" name="fullname" type="text" required /><br>
+                <input type="hidden" name="intake" value="JAN{{ date('Y', strtotime('+1 year')) }}">
 
-                <label for="phone">Phone Number</label>
-                <input id="phone" name="phone" type="number" onKeyPress="if(this.value.length==10) return false;" required /><br>
+                <label for="fname">First Name</label>
+                <input id="fname" name="fname" type="text" required /><br>
+
+                <label for="mname">Middle Name</label>
+                <input id="mname" name="mname" type="text" /><br>
+
+                <label for="lname">Last Name</label>
+                <input id="lname" name="lname" type="text" required /><br>
+
+                <label for="gender">Gender</label>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <br>
+
+                <label for="nid">National ID</label>
+                <input id="nid" name="nid" type="number" onKeyPress="if(this.value.length==8) return false;" required /><br>
+
+                <label for="dob">Date of Birth</label>
+                <input id="dob" name="dob" type="date" required /><br>
+
+                <label for="address">Address</label>
+                <input id="address" name="address" type="text" required /><br>
+
+                <label for="citizenship">Citizenship</label>
+                <input id="citizenship" name="citizenship" type="text" required /><br>
 
                 <label for="email">Email</label>
                 <input id="email" name="email" type="email" required /><br>
 
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="number" onKeyPress="if(this.value.length==10) return false;" required /><br>
 
+                <label for="course">Course</label>
+                <select id="course" name="course" required><br>
+                    @foreach($data as $item)
+                    <option value="{{$item->course_id}}">{{$item->course_name}}</option>
+                    @endforeach
+                </select><br>
 
-                <input type="submit" value="Submit"><br>
+                <label for="transcripts">High School Transcripts</label>
+                <input id="transcripts" name="transcripts" type="file" /><br>
 
-                <a href="{{ route('application_login') }}"> Already have an account? Login here</a>
+                <button type="submit">Submit Application Form </button>
             </form>
         </div>
     </section>

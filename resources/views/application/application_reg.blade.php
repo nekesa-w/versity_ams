@@ -41,7 +41,7 @@ https://templatemo.com/tm-557-grad-school
 			<ul class="main-menu">
 				@if(Session::has('loginId'))
 				<li><a href="{{ route('application_form') }}">Application Form</a></li>
-				<li><a href="{{ route('logout') }}">Logout</a></li>
+				<li><a href="{{ route('application_logout') }}">Logout</a></li>
 				@else
 				<li><a href="{{ route('application_login') }}">Login</a></li>
 				@endif

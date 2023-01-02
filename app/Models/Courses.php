@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Courses extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'courses_id';
+    protected $primaryKey = 'course_id';
 
     protected $fillable = [
         'course_id',
@@ -22,5 +22,10 @@ class Courses extends Model
     public function getFaculties()
     {
         return $this->belongsTo(Faculty::class, 'faculty_id');
+    }
+
+    public function getApplications()
+    {
+        return $this->hasMany(ApplicationForm::class, 'course_id', 'course_id');
     }
 }

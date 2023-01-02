@@ -44,18 +44,16 @@
 
         <div class="content">
             @if($errors->any())
-            <h4>{{$errors->first()}}</h4>
+            <h4 class="errors">{{$errors->first()}}</h4>
             @endif
 
 
             @if(session('success'))
-            <h4>{{session('success')}}</h4>
+            <h4 class="success">{{session('success')}}</h4>
             @endif
-            <br>
 
             <div class="forms">
 
-                <a id="edit"></a>
                 <form action="{{ route('course_update')}}" method="POST">
                     @csrf
                     <input type="hidden" name="cid" value="{{$Info->course_id}}">
@@ -64,14 +62,17 @@
                     </div>
 
                     <label for="name">Course Name</label>
-                    <input id="name" name="name" type="text" required /><br>
+                    <input id="name" name="name" type="text" value="{{$Info->course_name}}" required /><br>
+
+                    <label for="faculty">Current Faculty Id: {{$Info->faculty_id}}</label>
 
                     <label for="faculty">Faculty</label>
                     <select id="faculty" name="faculty" required><br>
-                        @foreach($dropdown as $item)
-                        <option value="{{$item->faculty_id}}">{{$item->faculty_name}}</option>
+                        @foreach($faculty as $item)
+                        <option value="{{$item->faculty_id}}">{{$item->faculty_name}}: {{$item->faculty_id}}</option>
                         @endforeach
                     </select>
+
 
                     <input type="submit" value="Edit"><br>
                 </form>

@@ -44,12 +44,12 @@
 
         <div class="content">
             @if($errors->any())
-            <h4>{{$errors->first()}}</h4>
+            <h4 class="errors">{{$errors->first()}}</h4>
             @endif
 
 
             @if(session('success'))
-            <h4>{{session('success')}}</h4>
+            <h4 class="success">{{session('success')}}</h4>
             @endif
 
             <div class="content-table">
@@ -76,8 +76,8 @@
                             <td> {{$item->course_name}}</td>
                             <td> {{$item->faculty_id}}</td>
                             <td> {{$item->getFaculties->faculty_name}}</td>
-                            <td><a href="edit/{{$item->course_id}}">Edit</a></td>
-                            <td><a href="delete/{{$item->course_id}}">Delete</a></td>
+                            <td><a href="course_edit/{{$item->course_id}}">Edit</a></td>
+                            <td><a href="course_delete/{{$item->course_id}}">Delete</a></td>
                         </tr>
                         @endforeach
                     </table>

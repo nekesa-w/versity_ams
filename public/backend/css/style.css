@@ -196,6 +196,20 @@
 		border-radius: 4px;
 	}
 
+	.container .content .content-table .approve {
+		background-color: #315230;
+		color: #fff;
+		padding: 15px;
+		border-radius: 4px;
+	}
+
+	.container .content .content-table .reject {
+		background-color: #8d3636;
+		color: #fff;
+		padding: 15px;
+		border-radius: 4px;
+	}
+
 	.container .content .forms {
 		min-height: 60vh;
 		display: block;
@@ -210,6 +224,12 @@
 		display: flex;
 		flex-direction: column;
 		padding: 20px;
+	}
+
+
+	.application-table {
+		width: 900px;
+		overflow-x: scroll;
 	}
 
 	.container .content form {
@@ -262,6 +282,22 @@
 		margin-bottom: 10px;
 	}
 
+	.content h4 {
+		text-align: center;
+		padding: 15px 0;
+		color: #fff;
+		font-size: 15px;
+		margin: 0 50px;
+		margin-bottom: 10px;
+	}
+
+	.success {
+		background-color: #315230;
+	}
+
+	.errors {
+		background-color: #8d3636;
+	}
 
 	@media screen and (max-width: 1050px) {
 		.side-menu li {

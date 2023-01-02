@@ -1423,7 +1423,7 @@ https://templatemo.com/tm-557-grad-school
     margin-bottom: 20px;
   }
 
-  .container-app input[type=submit] {
+  .container-app input[type=submit], .container-app button[type=submit] {
     width: 30%;
     background-color: #8a3c68;
     color: #FFF;
@@ -1436,8 +1436,17 @@ https://templatemo.com/tm-557-grad-school
 
   .container-app h3 {
     text-align: center;
-    padding: 10px 0;
-    color: #000;
-    background-color: #ac678e;
+    padding: 15px 0;
+    color: #fff;
     font-size: 15px;
+    margin: 0 50px;
+    margin-bottom: 10px;
+  }
+
+  .success {
+    background-color: #315230;
+  }
+
+  .errors {
+    background-color: #8d3636;
   }

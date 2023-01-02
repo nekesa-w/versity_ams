@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('students', function (Blueprint $table) {
-            $table->id('student_id')->unique();
+        Schema::create('application_forms', function (Blueprint $table) {
+            $table->id('applicant_id')->unique();
             $table->integer('national_passport_id');
             $table->string('first_name');
             $table->string('middle_name')->nullable();
@@ -27,7 +27,8 @@ return new class extends Migration
             $table->integer('phone');
             $table->string('intake');
             $table->integer('course_id');
-            $table->string('role')->default('student');
+            $table->string('transcripts');
+            $table->string('role')->default('applicant');
             $table->timestamps();
         });
     }
@@ -39,6 +40,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('students');
+        Schema::dropIfExists('application_forms');
     }
 };

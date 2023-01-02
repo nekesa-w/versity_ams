@@ -17,10 +17,11 @@
 		</div>
 
 		<ul>
-			<li><a href="{{ route('admin_faculty') }}">Faculty</a></li>
-			<li><a href="{{ route('admin_course') }}">Course</a></li>
-			<li><a href="{{ route('admin_student') }}">Student</a></li>
-			<li><a href="{{ route('admin_lecturer') }}">Lecturer</a></li>
+			<li><a href="{{ route('admin_application') }}">Applications</a></li>
+			<li><a href="{{ route('admin_faculty') }}">Faculties</a></li>
+			<li><a href="{{ route('admin_course') }}">Courses</a></li>
+			<li><a href="{{ route('admin_student') }}">Students</a></li>
+			<li><a href="{{ route('admin_lecturer') }}">Lecturers</a></li>
 			<li><a href="{{ route('admin_staff') }}">Staff</a></li>
 		</ul>
 	</div>
@@ -46,6 +47,17 @@
 
 		<div class="content">
 			<div class="cards">
+				<div class="card">
+					<div class="box">
+						<h1>{{ $applicants }}</h1>
+						<h3>Pending Applicants</h3>
+					</div>
+					<div class="icon-case">
+						<img src="students.png" alt="">
+					</div>
+				</div>
+
+
 				<div class="card">
 					<div class="box">
 						<h1>{{ $faculties }}</h1>

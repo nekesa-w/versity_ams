@@ -53,12 +53,12 @@ https://templatemo.com/tm-557-grad-school
     <section class="section application">
         <div class="container-app">
             @if($errors->any())
-            <h3>{{$errors->first()}}</h3>
+            <h3 class="errors">{{$errors->first()}}</h3>
             @endif
 
 
             @if(session('success'))
-            <h3>{{session('success')}}</h3>
+            <h3 class="success">{{session('success')}}</h3>
             @endif
 
             <div class="heading-app">
