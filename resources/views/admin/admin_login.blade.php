@@ -16,7 +16,7 @@ https://templatemo.com/tm-557-grad-school
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Application Form </title>
+    <title> Admin Login</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('/frontend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -32,7 +32,7 @@ https://templatemo.com/tm-557-grad-school
 <body>
     <header class="main-header clearfix" role="header">
         <div class="logo">
-            <a href="{{ route('home') }}"><em>Ver</em>sity</a>
+            <a href="{{ route('dashboard') }}"><em>Ver</em>sity</a>
         </div>
 
         <a href="" class="menu-link"><i class="fa fa-bars"></i></a>
@@ -40,10 +40,9 @@ https://templatemo.com/tm-557-grad-school
         <nav id="menu" class="main-nav" role="navigation">
             <ul class="main-menu">
                 @if(Session::has('loginId'))
-                <li><a href="{{ route('application_form') }}">Application Form</a></li>
-                <li><a href="{{ route('application_logout') }}">Logout</a></li>
+                <li><a href="{{ route('admin_logout') }}">Logout</a></li>
                 @else
-                <li><a href="{{ route('application_login') }}">Login</a></li>
+                <li><a href="{{ route('admin_login') }}">Login</a></li>
                 @endif
             </ul>
         </nav>
@@ -51,29 +50,30 @@ https://templatemo.com/tm-557-grad-school
     </header>
 
     <section class="section application">
-
         <div class="container-app">
+            @if($errors->any())
+            <h3>{{$errors->first()}}</h3>
+            @endif
+
+
+            @if(session('success'))
+            <h3>{{session('success')}}</h3>
+            @endif
+
             <div class="heading-app">
-                <h2>Application Form</h2>
-                <p>Please fill in the form carefully and make sure all information is accurate</p>
+                <h2>Admin Login</h2>
             </div>
 
-            <form action="application_reg" method="POST">
+            <form action="admin_login" method="POST">
                 @csrf
-                <label for="fullname">Full Name</label>
-                <input id="fullname" name="fullname" type="text" required /><br>
+                <label for="username">Username</label>
+                <input id="username" name="username" type="username" required /><br>
 
-                <label for="phone">Phone Number</label>
-                <input id="phone" name="phone" type="number" onKeyPress="if(this.value.length==10) return false;" required /><br>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required /><br>
 
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required /><br>
-
-
-
-                <input type="submit" value="Submit"><br>
-
-                <a href="{{ route('application_login') }}"> Already have an account? Login here</a>
+                <input type="submit" value="Login"><br>
+                <a href="{{ route('application_login') }}"> Not an admin? Login here </a><br>
             </form>
         </div>
     </section>
@@ -109,7 +109,7 @@ https://templatemo.com/tm-557-grad-school
                     <nav>
                         <ul class="footer-links nav flex-column">
                             <li class="nav-item">
-                                <a href="{{ route('application_reg') }}" title="Applications">Undergraduate Applications</a>
+                                <a href="{{ route('application_reg') }}" title="Admissions">Undergraduate Admissions</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('faculty_of_art') }}" title="Faculty of Art">Faculty of Art</a>
@@ -170,20 +170,6 @@ https://templatemo.com/tm-557-grad-school
             </div>
         </div>
     </footer>
-
-    <!-- Scripts -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('/frontend/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
-    <script src="{{ asset('/frontend/assets/js/isotope.min.js') }}"></script>
-    <script src="{{ asset('/frontend/assets/js/owl-carousel.js') }}"></script>
-    <script src="{{ asset('/frontend/assets/js/lightbox.js') }}"></script>
-    <script src="{{ asset('/frontend/assets/js/tabs.js') }}"></script>
-    <script src="{{ asset('/frontend/assets/js/video.js') }}"></script>
-    <script src="{{ asset('/frontend/assets/js/slick-slider.js') }}"></script>
-    <script src="{{ asset('/frontend/assets/js/custom.js') }}"></script>
-
 </body>
 
 </html>

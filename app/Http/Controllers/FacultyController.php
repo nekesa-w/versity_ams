@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Faculty;
 use App\Http\Requests\StoreFacultyRequest;
 use App\Http\Requests\UpdateFacultyRequest;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class FacultyController extends Controller
 {
@@ -82,5 +85,18 @@ class FacultyController extends Controller
     public function destroy(Faculty $faculty)
     {
         //
+    }
+
+    function getData(Request $request)
+    {
+        $name = $request->input('name');
+
+        $isInsertSuccess = Faculty::insert([
+            'faculty_name' => $name,
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now(),
+        ]);
+        if ($isInsertSuccess) return redirect()->route('admin_faculty')->withSuccess('Faculty was added');
+        else return Redirect::back()->withErrors(['error' => 'Faculty was not added']);
     }
 }

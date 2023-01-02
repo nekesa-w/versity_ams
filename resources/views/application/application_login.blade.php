@@ -41,7 +41,7 @@ https://templatemo.com/tm-557-grad-school
             <ul class="main-menu">
                 @if(Session::has('loginId'))
                 <li><a href="{{ route('application_form') }}">Application Form</a></li>
-                <li><a href="{{ route('logout') }}">Logout</a></li>
+                <li><a href="{{ route('application_logout') }}">Logout</a></li>
                 @else
                 <li><a href="{{ route('application_login') }}">Login</a></li>
                 @endif
@@ -75,7 +75,8 @@ https://templatemo.com/tm-557-grad-school
                 <input id="password" name="password" type="password" required /><br>
 
                 <input type="submit" value="Login"><br>
-                <a href="{{ route('application_reg') }}"> Do not have an account? Register here </a>
+                <a href="{{ route('application_reg') }}"> Do not have an account? Register here </a><br><br>
+                <a href="{{ route('admin_login') }}"> Not a user? Admin login here </a>
             </form>
         </div>
     </section>
@@ -111,7 +112,7 @@ https://templatemo.com/tm-557-grad-school
                     <nav>
                         <ul class="footer-links nav flex-column">
                             <li class="nav-item">
-                                <a href="{{ route('application_reg') }}" title="Admissions">Undergraduate Admissions</a>
+                                <a href="{{ route('application_reg') }}" title="Applications">Undergraduate Applications</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('faculty_of_art') }}" title="Faculty of Art">Faculty of Art</a>

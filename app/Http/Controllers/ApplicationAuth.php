@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Applications;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class ApplicationAuth extends Controller
@@ -22,10 +21,9 @@ class ApplicationAuth extends Controller
         } else return Redirect::back()->withErrors(['msg' => 'Wrong email']);
     }
 
-    function applicationLogout()
+    function applicationLogout(Request $request)
     {
-        if (Session::has('loginId')) {
-            Session::pull('loginId');
-        } else return redirect()->route('application_login')->withSuccess('Logout was successful');
+        request()->session()->flush();
+        return redirect()->route('application_login');
     }
 }

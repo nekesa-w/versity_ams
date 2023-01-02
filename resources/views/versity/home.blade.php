@@ -243,7 +243,7 @@ https://templatemo.com/tm-557-grad-school
 					<nav>
 						<ul class="footer-links nav flex-column">
 							<li class="nav-item">
-								<a href="{{ route('application_reg') }}" title="Admissions">Undergraduate Admissions</a>
+								<a href="{{ route('application_reg') }}" title="Applications">Undergraduate Applications</a>
 							</li>
 							<li class="nav-item">
 								<a href="{{ route('faculty_of_art') }}" title="Faculty of Art">Faculty of Art</a>

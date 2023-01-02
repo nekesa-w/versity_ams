@@ -14,7 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('faculties', function (Blueprint $table) {
-            $table->id();
+            $table->id('faculty_id')->unique();;
+            $table->string('faculty_name');
+            $table->string('role')->default('faculty');
             $table->timestamps();
         });
     }
