@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('/backend/css/style.css') }}">
-    <title>Course</title>
+    <title>Courses</title>
 </head>
 
 <body>
@@ -17,6 +17,7 @@
         </div>
 
         <ul>
+            <li><a href="{{ route('admin_application') }}">Applications</a></li>
             <li><a href="{{ route('admin_faculty') }}">Faculty</a></li>
             <li><a href="{{ route('admin_course') }}">Course</a></li>
             <li><a href="{{ route('admin_student') }}">Student</a></li>

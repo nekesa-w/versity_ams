@@ -12,7 +12,7 @@
     <p>Office of Admissions</p>
     <p>Versity School of Art & Design</p>
     <p>Dear Mr./Mrs./Ms. {{$data['first_name']}} {{$data['last_name']}},</p>
-    <p> Welcome to Intake {{$data['first_name']}}!</p>
+    <p> Welcome to Intake {{$data['intake']}}!</p>
     <p>
         On behalf of everyone at Versity, I am pleased to congratulate you on our acceptance of your application. We were very impressed by your academic history and achievements and feel that you would make an excellent addition to the Versity alumni.
     </p>

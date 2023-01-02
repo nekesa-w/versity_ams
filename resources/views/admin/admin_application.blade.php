@@ -17,6 +17,7 @@
         </div>
 
         <ul>
+            <li><a href="{{ route('admin_application') }}">Applications</a></li>
             <li><a href="{{ route('admin_faculty') }}">Faculty</a></li>
             <li><a href="{{ route('admin_course') }}">Course</a></li>
             <li><a href="{{ route('admin_student') }}">Student</a></li>
@@ -97,7 +98,7 @@
                                 <td> {{$item->intake}}</td>
                                 <td> {{$item->course_id}}</td>
                                 <td> {{$item->getCoursesApp->course_name}}</td>
-                                <td><a href="{{ asset('/storage/'.$item->transcripts) }}">View</a></td>
+                                <td><a href="{{ asset('/storage/'.$item->transcripts)}}">View</a></td>
                                 <td><a class="approve" href="applicant_approve/{{$item->applicant_id}}">Approve</a></td>
                                 <td><a class="reject" href="applicant_reject/{{$item->applicant_id}}">Reject</a></td>
                             </tr>

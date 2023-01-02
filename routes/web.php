@@ -166,7 +166,6 @@ Route::get('applicant_reject/{applicant_id}', [ApplicationFormController::class,
 
 
 
-
 Route::get('/admin_staff', function () {
     return view('admin.admin_staff');
 })->name('admin_staff');

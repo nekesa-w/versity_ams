@@ -32,7 +32,7 @@ class ApplicationFormController extends Controller
             'phone' => $request->input('phone'),
             'intake' => $request->input('intake'),
             'course_id' => $request->input('course'),
-            'transcripts' => $request->file('transcripts')->store('public/docs'),
+            'transcripts' => $request->file('transcripts')->store('docs'),
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);

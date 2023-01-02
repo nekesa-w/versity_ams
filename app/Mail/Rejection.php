@@ -31,7 +31,7 @@ class Rejection extends Mailable
         return $this
             ->from('versity@test.com', 'Versity School of Art and Design')
             ->subject('Versity School of Art and Design')
-            ->view('emails.email')
+            ->view('emails.rejection')
             ->with('data', $this->data);
     }
 }
