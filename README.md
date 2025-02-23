@@ -48,7 +48,7 @@ DB_PASSWORD=your_password
 Run migrations:
 
 ```bash
-php artisan migrate
+php artisan migrate --seed
 ```
 
 ### 5. Start the Server
