@@ -4,6 +4,10 @@
 
 **Versity** is a **University Application Management System** built using **Laravel 9**. The application allows students to apply for courses, administrators to manage applications, and faculty members to oversee academic processes.
 
+## Images
+![Versity Home](/public/frontend/assets/images/versity_home.png)
+![Versity Login](/public/frontend/assets/images/versity_login.png)
+
 ## Installation
 
 ### 1. Clone the Repository
