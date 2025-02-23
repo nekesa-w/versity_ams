@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**Versity** is an academic management system built using Laravel 9 that focuses on the application process. The application allows students to apply for courses, administrators to manage applications, and faculty members to oversee academic processes.
+**Versity** is an academic management system built using Laravel 9 that focuses on the application process. The system allows students to apply for courses, administrators to manage applications, and faculty members to oversee academic processes.
 
 ## Images
 **Home**
