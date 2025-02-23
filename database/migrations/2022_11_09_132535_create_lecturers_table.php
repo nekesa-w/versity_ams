@@ -23,7 +23,7 @@ return new class extends Migration
             $table->date('date_of_birth');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->integer('phone');
+            $table->bigInteger('phone');
             $table->integer('faculty_id');
             $table->string('role')->default('lecturer');
             $table->timestamps();

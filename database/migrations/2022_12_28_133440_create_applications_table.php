@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('applications', function (Blueprint $table) {
             $table->string('fullname');
-            $table->integer('phone');
+            $table->bigInteger('phone');
             $table->string('email')->unique();;
             $table->string('password');
             $table->string('role')->default('applicant');

@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('citizenship');
             $table->string('email')->unique();
-            $table->integer('phone');
+            $table->bigInteger('phone');
             $table->string('intake');
             $table->integer('course_id');
             $table->string('role')->default('student');

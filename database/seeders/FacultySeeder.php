@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class FacultySeeder extends Seeder
 {
@@ -14,6 +14,25 @@ class FacultySeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('faculties')->insert([
+            [
+                'faculty_name' => 'Faculty of Arts',
+                'role' => 'faculty',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'faculty_name' => 'Faculty of Science',
+                'role' => 'faculty',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'faculty_name' => 'Faculty of Engineering',
+                'role' => 'faculty',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
     }
 }
