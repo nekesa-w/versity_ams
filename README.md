@@ -2,15 +2,38 @@
 
 ## Introduction
 
-**Versity** is a **Academic Management System** built using **Laravel 9**. The application allows students to apply for courses, administrators to manage applications, and faculty members to oversee academic processes.
+**Versity** is an academic management system built using Laravel 9 that focuses on the application process. The system allows students to apply for courses, administrators to manage applications, and faculty members to oversee academic processes.
 
 ## Images
+**Home**
+
+The main landing page of the university application system, showcasing available programs and essential details for prospective students.
 ![Versity Home](/public/frontend/assets/images/versity_home.png)
+
+**Login**
+
+The login page where users, including students, lecturers, and admins, can access their respective dashboards.
 ![Versity Login](/public/frontend/assets/images/versity_login.png)
+
+**Application Form**
+
+A structured form for applicants to submit their personal details, academic qualifications, and course preferences.
 ![Versity AppForm](/public/frontend/assets/images/versity_applicationform.png)
+
+**Admin Dashboard**
+
+The admin panel where administrators can manage applications, view user data, and oversee system operations.
 ![Versity Admin](/public/frontend/assets/images/versity_admin.png)
+
+**Admin Application View**
+
+A view of all submitted applications, allowing admins to review applicant information and status.
 ![Versity ViewApp](/public/frontend/assets/images/versity_application.png)
-![Versity ViewCour](/public/frontend/assets/images/versity_coures.png)
+
+**Admin Courses View**
+
+A page displaying the list of available courses, categorized by faculty, with relevant details for prospective students.
+![Versity ViewCour](/public/frontend/assets/images/versity_courses.png)
 
 ## Installation
 
